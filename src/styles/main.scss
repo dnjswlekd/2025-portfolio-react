@@ -1,0 +1,46 @@
+
+    /* main.scss */
+
+    /* 기본 색상 (라이트모드) */
+    :root {
+      --primary-bg-color: #fff;
+      --primary-text-color: #333;
+      --secondary-bg-color: #f4f4f4;
+    }
+
+    /* 다크모드 색상 */
+    .dark {
+      --primary-bg-color: #333;
+      --primary-text-color: #fff;
+      --secondary-bg-color: #444;
+    }
+
+    /* 전체 스타일 */
+    body {
+      background-color: var(--primary-bg-color);
+      color: var(--primary-text-color);
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .App {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: var(--secondary-bg-color);
+      color: var(--primary-text-color);
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: var(--primary-bg-color);
+    }
+    
