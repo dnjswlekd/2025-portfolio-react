@@ -1,5 +1,8 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import './styles/main.scss';
 
@@ -23,6 +26,7 @@ function App() {
     <div className={`App ${theme}`}>
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Home />
+      <Footer />
     </div>
   );
 }
