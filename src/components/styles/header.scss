@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .theme-toggle-btn {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .theme-toggle-btn:hover {
+    opacity: 0.8;
+  }
+}
