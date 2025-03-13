@@ -1,10 +1,35 @@
 .header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--primary-text-color);
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+    li {
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
 
   .theme-toggle-btn {
     background-color: var(--button-bg-color);
@@ -18,5 +43,18 @@
 
   .theme-toggle-btn:hover {
     opacity: 0.8;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: var(--primary-bg-color);
   }
 }

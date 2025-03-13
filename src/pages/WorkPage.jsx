@@ -1,13 +1,11 @@
+import React from 'react';
 
-    import React from 'react';
+function Work() {
+  return (
+    <div className="home">
+      <h1>Work</h1>
+    </div>
+  );
+}
 
-    function Work() {
-      return (
-        <div>
-          <h1>Work</h1>
-        </div>
-      );
-    }
-
-    export default Work;
-    
+export default Work;

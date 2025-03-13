@@ -1,13 +1,11 @@
+import React from 'react';
 
-    import React from 'react';
+function Skill() {
+  return (
+    <div className="home">
+      <h1>Skills</h1>
+    </div>
+  );
+}
 
-    function Skill() {
-      return (
-        <div>
-          <h1>Skills</h1>
-        </div>
-      );
-    }
-
-    export default Skill;
-    
+export default Skill;

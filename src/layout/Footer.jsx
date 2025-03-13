@@ -1,13 +1,12 @@
+import React from 'react';
+import '@/layout/styles/footer.scss';
 
-    import React from 'react';
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+  );
+}
 
-    function Footer() {
-      return (
-        <footer>
-          <p>&copy; 2025 My Portfolio</p>
-        </footer>
-      );
-    }
-
-    export default Footer;
-    
+export default Footer;

@@ -4,6 +4,9 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 
 import Home from './pages/HomePage';
+import AboutMe from './pages/AboutPage';
+import Skill from './pages/SkillPage';
+import Work from './pages/WorkPage';
 import './styles/main.scss';
 
 function App() {
@@ -23,11 +26,20 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={`App ${theme}`}>
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <Home />
-      <Footer />
-    </div>
+    <Router>
+      {' '}
+      {/* Router로 감싸기 */}
+      <div className={`App ${theme}`}>
+        <Header theme={theme} toggleTheme={toggleTheme} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/skill" element={<Skill />} />
+          <Route path="/work" element={<Work />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
