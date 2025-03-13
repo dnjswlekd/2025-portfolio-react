@@ -20,9 +20,8 @@
     flex-wrap: nowrap;
     height: min-content;
     justify-content: space-between;
-    max-width: 760px;
+    max-width: 780px;
     min-height: 68px;
-    overflow: visible;
     padding: 12px 12px 12px 24px;
     position: relative;
     background-color: var(--header-bg-color);
@@ -37,7 +36,6 @@
       gap: 1rem;
       height: min-content;
       justify-content: space-between;
-      overflow: visible;
       padding: 0;
 
       .logo {
@@ -51,34 +49,32 @@
         li {
           width: max-content;
           height: min-content;
-          overflow: visible;
 
           a {
             color: var(--header-text-color);
             text-decoration: none;
             cursor: pointer;
-            overflow: visible;
-            padding: 6px 20px;
-            width: max-content;
-            height: min-content;
+            padding: 6px 30px;
             line-height: 1.4em;
             border: 1px solid rgba(255, 255, 255, 0);
             // background-color: var(--header-bg-color);
-            border-radius: 8px;
-            box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px inset;
+            border-radius: 12px;
             transition: 0.35s;
+            height: 40px;
+            display: block;
+            line-height: 1.8;
 
             &:hover {
               border: 1px solid rgba(255, 255, 255, 0.15);
               background-color: rgba(20, 20, 20, 0);
-              box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 20px 0px inset;
+              box-shadow: var(--header-hover-box-shadow);
             }
 
             &.active {
               border: 1px solid rgba(255, 255, 255, 0.15);
               background: var(--header-bg-active-color);
               color: var(--header-text-active-color);
-              box-shadow: rgba(20, 20, 20, 0.2) 0px 0px 20px 0px inset;
+              box-shadow: var(--header-hover-box-shadow);
             }
           }
         }
@@ -87,7 +83,8 @@
   }
 
   .theme-toggle-btn {
-    background-color: transparent;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -95,14 +92,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.5s ease-in-out;
 
     .theme-toggle-icon {
       width: 24px;
       height: 24px;
-      transform-origin: 50% 50%;
-      &.rotating {
-        animation: rotateAnimation 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+      &.rotate-right {
+        animation: rotateRight 0.5s ease-out forwards;
+      }
+      &.rotate-left {
+        animation: rotateLeft 0.5s ease-out forwards;
       }
     }
 
@@ -117,14 +116,45 @@
     }
   }
 }
-@keyframes rotateAnimation {
+
+@keyframes rotateRight {
   0% {
-    transform: rotate(-360deg);
+    transform: rotate(0deg);
   }
-  50% {
+  20% {
+    transform: rotate(45deg);
+  }
+  40% {
+    transform: rotate(90deg);
+  }
+  60% {
+    transform: rotate(135deg);
+  }
+  80% {
     transform: rotate(180deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-45deg);
+  }
+  40% {
+    transform: rotate(-90deg);
+  }
+  60% {
+    transform: rotate(-135deg);
+  }
+  80% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg); /* 360도 회전 */
   }
 }
