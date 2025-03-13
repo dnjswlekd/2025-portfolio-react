@@ -4,13 +4,106 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
+  font-family: 'Cormorant', serif;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--primary-text-color);
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    flex: 1 0 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: min-content;
+    justify-content: space-between;
+    max-width: 760px;
+    min-height: 68px;
+    overflow: visible;
+    padding: 12px 12px 12px 24px;
+    position: relative;
+    width: 1px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 10px 0px inset;
+    opacity: 1;
+
+    .menu {
+      align-items: center;
+      display: flex;
+      flex: 1 0 0px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 20px;
+      height: min-content;
+      justify-content: flex-end;
+      overflow: visible;
+      padding: 0;
+      position: relative;
+      width: 1px;
+
+      ul {
+        li {
+          align-items: center;
+          display: flex;
+          flex: none;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 10px;
+          height: min-content;
+          justify-content: center;
+          overflow: visible;
+          padding: 0;
+          position: relative;
+          width: max-content;
+          z-index: 1;
+
+          a {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: min-content;
+            justify-content: center;
+            overflow: visible;
+            padding: 6px 16px;
+            position: relative;
+            text-decoration: none;
+            width: max-content;
+            line-height: 1.4em;
+            font-weight: 400;
+            border: 1px solid rgba(255, 255, 255, 0);
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 8px;
+            box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px inset;
+            transition: 0.35s;
+
+            &:hover {
+              border: 1px solid rgba(255, 255, 255, 0.15);
+              background-color: rgba(20, 20, 20, 0);
+              box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 20px 0px inset;
+            }
+
+            &.active {
+              background: var(--header-text-color);
+              color: var(--header-bg-color);
+              box-shadow: rgba(20, 20, 20, 0.2) 0px 0px 20px 0px inset;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .nav-links {
     display: flex;
@@ -32,6 +125,7 @@
   }
 
   .theme-toggle-btn {
+    font-family: 'Cormorant', serif;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
