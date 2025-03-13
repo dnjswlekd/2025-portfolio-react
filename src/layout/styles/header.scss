@@ -26,7 +26,6 @@
     padding: 12px 12px 12px 24px;
     position: relative;
     background-color: var(--header-bg-color);
-    color: var(--header-text-color);
     border-radius: 16px;
 
     .menu {
@@ -77,8 +76,8 @@
 
             &.active {
               border: 1px solid rgba(255, 255, 255, 0.15);
-              background: var(--header-text-color);
-              color: var(--header-bg-color);
+              background: var(--header-bg-active-color);
+              color: var(--header-text-active-color);
               box-shadow: rgba(20, 20, 20, 0.2) 0px 0px 20px 0px inset;
             }
           }
@@ -88,22 +87,20 @@
   }
 
   .theme-toggle-btn {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
+    background-color: transparent;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.5s ease-in-out;
 
     .theme-toggle-icon {
       width: 24px;
       height: 24px;
       transform-origin: 50% 50%;
-      transition: transform 0.5s ease;
       &.rotating {
         animation: rotateAnimation 0.5s ease-in-out;
       }
@@ -117,7 +114,6 @@
 
     &:hover {
       opacity: 0.8;
-      // transform: rotate(180deg);
     }
   }
 }

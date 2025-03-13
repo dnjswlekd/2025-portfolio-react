@@ -9,7 +9,9 @@
   --secondary-bg-color: #f4f4f4;
 
   --header-bg-color: rgb(20, 20, 20);
+  --header-bg-active-color: #fff;
   --header-text-color: #fff;
+  --header-text-active-color: rgb(20, 20, 20);
 }
 
 /* 다크모드 색상 */
@@ -19,7 +21,9 @@
   --secondary-bg-color: #444;
 
   --header-bg-color: #fff;
+  --header-bg-active-color: rgb(20, 20, 20);
   --header-text-color: rgb(20, 20, 20);
+  --header-text-active-color: #fff;
 }
 
 * {
