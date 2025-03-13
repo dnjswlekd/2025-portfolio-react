@@ -4,47 +4,39 @@ import ThemeToggleButton from '@/components/Buttons/ThemeToggleButton';
 import '@/layout/styles/header.scss';
 
 function Header({ theme, toggleTheme }) {
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About Me' },
+    { to: '/skill', label: 'Skills' },
+    { to: '/work', label: 'Blog' },
+  ];
+
   return (
     <header className="header">
       <div className="inner">
         <div className="menu">
-          <h1>wonji logo</h1>
+          {/* 로고를 클릭할 때 홈으로 이동하도록 변경 */}
+          <NavLink to="/" className="logo">
+            <h1>wonji logo</h1>
+          </NavLink>
           <nav>
             <ul className="nav-links">
-              <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) => (isActive ? 'active' : '')}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) => (isActive ? 'active' : '')}
-                >
-                  About Me
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/skill"
-                  className={({ isActive }) => (isActive ? 'active' : '')}
-                >
-                  Skills
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/work"
-                  className={({ isActive }) => (isActive ? 'active' : '')}
-                >
-                  Blog
-                </NavLink>
-              </li>
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <NavLink
+                    to={link.to}
+                    className={({ isActive }) => (isActive ? 'active' : '')}
+                    aria-current={
+                      link.to === window.location.pathname ? 'page' : undefined
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
+          {/* 테마 토글 버튼 */}
           <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>

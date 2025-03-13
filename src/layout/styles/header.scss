@@ -41,6 +41,11 @@
       overflow: visible;
       padding: 0;
 
+      .logo {
+        text-decoration: none;
+        color: var(--header-text-color);
+      }
+
       ul {
         display: flex;
         gap: 1rem;
@@ -118,7 +123,7 @@
 }
 @keyframes rotateAnimation {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
   50% {
     transform: rotate(180deg);
