@@ -16,6 +16,8 @@
   --primary-bg-color: #333;
   --primary-text-color: #fff;
   --secondary-bg-color: #444;
+  --header-bg-color: #fff;
+  --header-text-color: rgb(20, 20, 20);
 }
 
 * {
@@ -28,6 +30,7 @@ body {
   color: var(--primary-text-color);
   transition: all 0.3s ease;
   font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
 }
 
 .App {

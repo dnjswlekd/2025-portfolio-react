@@ -4,13 +4,10 @@
   z-index: 1;
   top: 0;
   left: 0;
-  font-family: 'Cormorant', serif;
+  font-family: 'Satoshi', sans-serif;
   padding: 20px;
   display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
   gap: 10px;
-  height: min-content;
   justify-content: center;
   overflow: hidden;
   padding: 20px;
@@ -28,62 +25,41 @@
     overflow: visible;
     padding: 12px 12px 12px 24px;
     position: relative;
-    width: 1px;
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
-    backdrop-filter: blur(10px);
     border-radius: 16px;
-    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 10px 0px inset;
-    opacity: 1;
 
     .menu {
-      align-items: center;
       display: flex;
+      align-items: center;
       flex: 1 0 0px;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: 20px;
+      gap: 1rem;
       height: min-content;
-      justify-content: flex-end;
+      justify-content: space-between;
       overflow: visible;
       padding: 0;
-      position: relative;
-      width: 1px;
 
       ul {
+        display: flex;
+        gap: 1rem;
         li {
-          align-items: center;
-          display: flex;
-          flex: none;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          gap: 10px;
-          height: min-content;
-          justify-content: center;
-          overflow: visible;
-          padding: 0;
-          position: relative;
           width: max-content;
-          z-index: 1;
+          height: min-content;
+          overflow: visible;
 
           a {
-            align-items: center;
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            gap: 10px;
-            height: min-content;
-            justify-content: center;
-            overflow: visible;
-            padding: 6px 16px;
-            position: relative;
+            color: var(--header-text-color);
             text-decoration: none;
+            cursor: pointer;
+            overflow: visible;
+            padding: 6px 20px;
             width: max-content;
+            height: min-content;
             line-height: 1.4em;
-            font-weight: 400;
             border: 1px solid rgba(255, 255, 255, 0);
-            background-color: rgba(0, 0, 0, 0);
+            // background-color: var(--header-bg-color);
             border-radius: 8px;
             box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px inset;
             transition: 0.35s;
@@ -95,6 +71,7 @@
             }
 
             &.active {
+              border: 1px solid rgba(255, 255, 255, 0.15);
               background: var(--header-text-color);
               color: var(--header-bg-color);
               box-shadow: rgba(20, 20, 20, 0.2) 0px 0px 20px 0px inset;
@@ -105,50 +82,48 @@
     }
   }
 
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-
-    li {
-      a {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-
-        &:hover {
-          color: var(--accent-color);
-        }
-      }
-    }
-  }
-
   .theme-toggle-btn {
-    font-family: 'Cormorant', serif;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-  }
-
-  .theme-toggle-btn:hover {
-    opacity: 0.8;
-  }
-
-  button {
-    padding: 10px 20px;
-    border: none;
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-text-color);
     cursor: pointer;
-    border-radius: 5px;
-  }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  button:hover {
-    background-color: var(--primary-bg-color);
+    .theme-toggle-icon {
+      width: 24px;
+      height: 24px;
+      transform-origin: 50% 50%;
+      transition: transform 0.5s ease;
+      &.rotating {
+        animation: rotateAnimation 0.5s ease-in-out;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      // transform: rotate(180deg);
+    }
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

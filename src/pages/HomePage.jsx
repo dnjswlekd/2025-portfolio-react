@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Main from '@/components/HomeMain';
-import AboutMe from '@/components/HomeAboutMe';
-import Skill from '@/components/HomeSkill';
-import Work from '@/components/HomeWork';
+import Main from '@/components/Home/HomeMain';
+import AboutMe from '@/components/Home/HomeAboutMe';
+import Skill from '@/components/Home/HomeSkill';
+import Work from '@/components/Home/HomeWork';
 
 function Home() {
   return (

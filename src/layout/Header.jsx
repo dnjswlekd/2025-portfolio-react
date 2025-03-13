@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import ThemeToggleButton from '@/components/Buttons/ThemeToggleButton';
 import '@/layout/styles/header.scss';
 
 function Header({ theme, toggleTheme }) {
   return (
     <header className="header">
       <div className="inner">
-        <h1>wonji logo</h1>
         <div className="menu">
+          <h1>wonji logo</h1>
           <nav>
             <ul className="nav-links">
               <li>
@@ -39,14 +40,12 @@ function Header({ theme, toggleTheme }) {
                   to="/work"
                   className={({ isActive }) => (isActive ? 'active' : '')}
                 >
-                  Work
+                  Blog
                 </NavLink>
               </li>
             </ul>
           </nav>
-          <button className="theme-toggle-btn" onClick={toggleTheme}>
-            {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
-          </button>
+          <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
     </header>
