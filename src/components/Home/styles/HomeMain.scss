@@ -1,13 +1,13 @@
-.homeMain {
+.home-main {
   max-width: 1080px;
-  height: fit-content;
+  height: 100vh;
   margin: 0 auto;
   padding: 100px 0 0;
   position: relative;
   overflow: hidden;
 
   .inner {
-    height: 100%;
+    max-height: 850px;
     color: var(--tertiary-text-color);
     background-color: var(--tertiary-bg-color);
     border-radius: 16px;

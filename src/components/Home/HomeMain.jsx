@@ -6,7 +6,7 @@ import Button from '@/components/Buttons/Button';
 
 function HomeMain({ onScrollToAboutMe }) {
   return (
-    <section className="section homeMain">
+    <section className="section home-main">
       <div className="inner">
         <div className="intro">
           <div className="intro-text">
