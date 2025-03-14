@@ -1,0 +1,42 @@
+.footer {
+  margin-top: 20px;
+  padding: 40px 30px;
+  background-color: var(--header-bg-color);
+  color: var(--header-bg-active-color);
+  line-height: 1.6;
+  font-weight: 300;
+
+  .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    gap: 60px;
+
+    .left {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        gap: 30px;
+
+        li {
+          a {
+            color: var(--header-text-color);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .right {
+      color: #9c9c9c;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
