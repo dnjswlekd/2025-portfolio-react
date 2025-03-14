@@ -33,8 +33,9 @@ function AnimatedRoutes() {
         nodeRef={nodeRef} // nodeRef 추가
       >
         <div ref={nodeRef}>
-          {' '}
-          {/* 애니메이션을 적용할 요소 지정 */}
+          <div className="frame">
+            <div className="inner"></div>
+          </div>
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />

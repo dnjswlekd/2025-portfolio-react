@@ -1,0 +1,117 @@
+.homeMain {
+  max-width: 1080px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 100px 0 0;
+  position: relative;
+  overflow: hidden;
+
+  .inner {
+    height: 100%;
+    color: var(--tertiary-text-color);
+    background-color: var(--tertiary-bg-color);
+    border-radius: 16px;
+    border: 1px dotted rgba(0, 0, 0, 0.16);
+    padding: 60px 0;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+
+    .intro {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+
+      .intro-text {
+        max-width: 780px;
+        display: flex;
+        flex-flow: column;
+        gap: 3rem;
+        text-align: center;
+
+        h1 {
+          font-family: 'Satoshi', sans-serif;
+          font-size: 62px;
+          text-transform: uppercase;
+          letter-spacing: -2px;
+
+          span {
+            display: block;
+          }
+        }
+
+        .desc {
+          display: flex;
+          flex-flow: column;
+          gap: 1.5rem;
+          p {
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: -0.4px;
+          }
+        }
+      }
+
+      .profile-img {
+        flex-shrink: 0;
+        width: 350px;
+        height: 350px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-position: center center;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      place-items: center;
+      margin: 0px;
+      padding: 10px;
+      list-style-type: none;
+      opacity: 1;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0) 4%,
+        rgb(0, 0, 0) 96%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      overflow: hidden;
+      .items {
+        display: flex;
+        gap: 10px;
+        .item {
+          width: 360px;
+          height: auto;
+          border-radius: 15px;
+          background-color: blueviolet;
+          animation: text_loop 5s linear infinite;
+
+          img {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes text_loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

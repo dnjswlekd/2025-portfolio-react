@@ -8,7 +8,7 @@ import Work from '@/components/Home/HomeWork';
 
 function Home() {
   return (
-    <div className="home">
+    <div className="main">
       <Main />
       <AboutMe />
       <Link to="/about">

@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/variables/Satoshi-Variable.ttf') format('truetype'),
-    url('/variables/Satoshi-VariableItalic.ttf') format('truetype');
+  src: url('@/assets/fonts/Variables/Satoshi-Variable.ttf') format('truetype'),
+    url('@/assets/fonts/Variables/Satoshi-VariableItalic.ttf')
+      format('truetype');
   font-weight: 100 900; /* 폰트 굵기 범위 */
   font-style: normal, italic; /* 일반과 이탤릭 스타일 설정 */
 }
