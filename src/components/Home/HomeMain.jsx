@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '@/components/Home/styles/HomeMain.scss';
 // import myProfileImg from '@/assets/images/myProfile.jpg';
 import interpark from '@/assets/images/homeWork-interpark.png';
@@ -6,8 +6,39 @@ import naver from '@/assets/images/homeWork-naver.png';
 import Button from '@/components/Buttons/Button';
 
 function HomeMain({ onScrollToAboutMe }) {
+  const animateRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible'); // 애니메이션 클래스 추가
+          }
+        });
+      },
+      {
+        threshold: 0.5, // 50% 이상 보일 때 애니메이션 실행
+      }
+    );
+
+    if (animateRef.current) {
+      observer.observe(animateRef.current);
+    }
+
+    return () => {
+      if (animateRef.current) {
+        observer.unobserve(animateRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="section home-main">
+    <section
+      className="section home-main animate"
+      data-animate="motion"
+      ref={animateRef}
+    >
       <div className="inner">
         <div className="intro">
           <div className="intro-text">
