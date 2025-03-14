@@ -48,6 +48,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* 전체 스타일 */
 body {
   background-color: var(--primary-bg-color);

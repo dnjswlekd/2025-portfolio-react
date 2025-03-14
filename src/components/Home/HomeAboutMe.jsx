@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 import Button from '@/components/Buttons/Button';
 
 import '@/components/Home/styles/HomeAbout.scss';
 import myProfileImg from '@/assets/images/myProfile.jpg';
 
 function HomeAboutMe() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0,
+  });
+
   return (
-    <div className="section home-about">
+    <div
+      className={`section home-about animate ${
+        inView ? 'animate-visible' : ''
+      }`}
+      ref={ref}
+    >
       <div className="inner">
         <div>
           <h1 className="title">About Me</h1>

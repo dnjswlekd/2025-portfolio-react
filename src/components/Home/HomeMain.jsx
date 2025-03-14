@@ -8,7 +8,7 @@ import Button from '@/components/Buttons/Button';
 function HomeMain({ onScrollToAboutMe }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.7,
   });
 
   return (

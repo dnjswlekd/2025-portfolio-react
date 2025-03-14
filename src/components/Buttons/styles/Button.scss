@@ -4,7 +4,6 @@
   font-family: 'Satoshi', sans-serif;
   button {
     @include mixin.button-reset;
-    text-decoration: none;
     cursor: pointer;
     padding: 6px 25px;
     line-height: 1.4em;
