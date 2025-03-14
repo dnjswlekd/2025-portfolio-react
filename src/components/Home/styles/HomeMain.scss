@@ -135,3 +135,15 @@
     transform: translateX(-100%);
   }
 }
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 화면에 보일 때 애니메이션 적용 */
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
