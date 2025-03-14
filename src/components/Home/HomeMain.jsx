@@ -2,6 +2,7 @@ import React from 'react';
 import '@/components/Home/styles/HomeMain.scss';
 // import myProfileImg from '@/assets/images/myProfile.jpg';
 import interpark from '@/assets/images/homeWork-interpark.png';
+import naver from '@/assets/images/homeWork-naver.png';
 import Button from '@/components/Buttons/Button';
 
 function HomeMain({ onScrollToAboutMe }) {
@@ -30,7 +31,7 @@ function HomeMain({ onScrollToAboutMe }) {
             <img src={myProfileImg} alt="Profile Image" />
           </div> */}
         </div>
-        <div className="down-btn">
+        <div className="scroll-down-btn">
           <Button onClick={onScrollToAboutMe} label="Scroll Down" />
         </div>
         <div className="slider">
@@ -39,13 +40,13 @@ function HomeMain({ onScrollToAboutMe }) {
               <img src={interpark} alt="" />
             </li>
             <li className="item">
-              <img src={interpark} alt="" />
+              <img src={naver} alt="" />
             </li>
             <li className="item">
               <img src={interpark} alt="" />
             </li>
             <li className="item">
-              <img src={interpark} alt="" />
+              <img src={naver} alt="" />
             </li>
             <li className="item">
               <img src={interpark} alt="" />

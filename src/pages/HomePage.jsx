@@ -22,9 +22,9 @@ function Home() {
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-      <Link to="/about">
+      {/* <Link to="/about">
         <Button label="View More About Me" />
-      </Link>
+      </Link> */}
       <Skill />
       <Link to="/skill">
         <Button label="View More Skills" />

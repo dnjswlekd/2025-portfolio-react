@@ -1,6 +1,6 @@
 .home-main {
   max-width: 1080px;
-  height: 100vh;
+  // height: 100vh;
   margin: 0 auto;
   padding: 100px 0 0;
   position: relative;
@@ -68,6 +68,21 @@
       }
     }
 
+    .scroll-down-btn {
+      display: inline-block;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px); // 위로 튕기는 효과
+      }
+    }
+
     .slider {
       display: flex;
       width: 100%;
@@ -90,17 +105,20 @@
       .items {
         display: flex;
         gap: 10px;
+        flex-wrap: nowrap;
         .item {
+          animation: img-loop 5s linear infinite;
           width: 360px;
           height: auto;
           border-radius: 15px;
           background-color: blueviolet;
-          animation: text_loop 5s linear infinite;
+          // animation: img-loop 5s linear infinite;
 
           img {
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
+            object-fit: cover;
             border-radius: 15px;
           }
         }
@@ -108,11 +126,12 @@
     }
   }
 }
-@keyframes text_loop {
+
+@keyframes img-loop {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(-100%, 0, 0);
+    transform: translateX(-100%);
   }
 }
