@@ -1,13 +1,12 @@
-// import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './styles/Button.scss';
 
-// function Button() {
-//   return (
-//     <button className="theme-toggle-btn">
-//       <div>
-//         <img />
-//       </div>
-//     </button>
-//   );
-// }
+function ScrollButton({ onClick, label }) {
+  return (
+    <div className="primary-button">
+      <button onClick={onClick}>{label}</button>
+    </div>
+  );
+}
 
-// export default Button;
+export default ScrollButton;

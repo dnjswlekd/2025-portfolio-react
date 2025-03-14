@@ -2,6 +2,7 @@ import React from 'react';
 import '@/components/Home/styles/HomeMain.scss';
 // import myProfileImg from '@/assets/images/myProfile.jpg';
 import interpark from '@/assets/images/homeWork-interpark.png';
+import Button from '@/components/Buttons/Button';
 
 function HomeMain({ onScrollToAboutMe }) {
   return (
@@ -30,7 +31,7 @@ function HomeMain({ onScrollToAboutMe }) {
           </div> */}
         </div>
         <div className="down-btn">
-          <button onClick={onScrollToAboutMe}>박원지가 궁금하시다면?</button>
+          <Button onClick={onScrollToAboutMe} label="Scroll Down" />
         </div>
         <div className="slider">
           <ul className="items">

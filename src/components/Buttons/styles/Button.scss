@@ -1,0 +1,24 @@
+@use '@/styles/mixins' as mixin;
+
+.primary-button {
+  font-family: 'Satoshi', sans-serif;
+  button {
+    @include mixin.button-reset;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 25px;
+    line-height: 1.4em;
+    border-radius: 12px;
+    transition: 0.35s;
+    height: 40px;
+    display: block;
+    line-height: 1.8;
+    background-color: var(--primary-btn-color);
+    color: var(--primary-btn-text-color);
+    border: 1px solid var(--primary-btn-border-color);
+
+    &:hover {
+      box-shadow: var(--header-hover-box-shadow);
+    }
+  }
+}

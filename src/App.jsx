@@ -15,9 +15,6 @@ import AboutMe from './pages/AboutPage';
 import Skill from './pages/SkillPage';
 import Work from './pages/WorkPage';
 
-import './styles/main.scss';
-import './styles/_transition.scss';
-
 function AnimatedRoutes() {
   const location = useLocation();
 

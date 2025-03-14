@@ -2,6 +2,7 @@
 
 @use './_font';
 @use './_reset';
+@use './_mixins';
 
 /* 기본 색상 (라이트모드) */
 :root {
@@ -17,6 +18,10 @@
 
   --tertiary-bg-color: #fff;
   --tertiary-text-color: #333;
+
+  --primary-btn-color: #333;
+  --primary-btn-text-color: #fff;
+  --primary-btn-border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* 다크모드 색상 */
@@ -33,6 +38,10 @@
 
   --tertiary-bg-color: #ffffff;
   --tertiary-text-color: #333;
+
+  --primary-btn-color: #fff;
+  --primary-btn-text-color: #333;
+  --primary-btn-border-color: rgba(0, 0, 0, 0.15);
 }
 
 * {
