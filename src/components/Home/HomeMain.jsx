@@ -3,7 +3,7 @@ import '@/components/Home/styles/HomeMain.scss';
 // import myProfileImg from '@/assets/images/myProfile.jpg';
 import interpark from '@/assets/images/homeWork-interpark.png';
 
-function HomeMain() {
+function HomeMain({ onScrollToAboutMe }) {
   return (
     <section className="section homeMain">
       <div className="inner">
@@ -30,7 +30,7 @@ function HomeMain() {
           </div> */}
         </div>
         <div className="down-btn">
-          <button>박원지가 궁금하시다면?</button>
+          <button onClick={onScrollToAboutMe}>박원지가 궁금하시다면?</button>
         </div>
         <div className="slider">
           <ul className="items">
