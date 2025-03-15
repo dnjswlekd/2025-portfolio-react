@@ -26,9 +26,9 @@ function Home() {
         <Button label="View More About Me" />
       </Link> */}
       <Skill />
-      <Link to="/skill">
+      {/* <Link to="/skill">
         <Button label="View More Skills" />
-      </Link>
+      </Link> */}
       <Work />
       <Link to="/work">
         <Button label="View More Work" />

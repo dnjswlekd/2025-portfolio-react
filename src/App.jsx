@@ -30,9 +30,6 @@ function AnimatedRoutes() {
         nodeRef={nodeRef} // nodeRef 추가
       >
         <div ref={nodeRef}>
-          <div className="frame">
-            <div className="inner"></div>
-          </div>
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
@@ -60,6 +57,9 @@ function App() {
 
   return (
     <Router>
+      <div className="frame">
+        <div className="inner"></div>
+      </div>
       <div className={`App ${theme}`}>
         <Header theme={theme} toggleTheme={toggleTheme} />
         <AnimatedRoutes />

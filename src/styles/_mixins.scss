@@ -5,3 +5,23 @@
   background: none;
   cursor: pointer;
 }
+
+@mixin home-title {
+  font-size: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+@mixin badge {
+  z-index: 1;
+  position: absolute;
+  top: -45px;
+  left: -23px;
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  background: linear-gradient(137deg, #ffffff, #b8ceff, #78c7f9, #ffffff);
+  background-size: 240% 240%;
+  animation: gradient-animation 5s ease infinite;
+}

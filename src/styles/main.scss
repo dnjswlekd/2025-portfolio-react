@@ -63,20 +63,21 @@ body {
 
 .frame {
   flex: 0 0 auto;
-  height: auto;
+  // height: auto;
+  height: 100vh;
   left: 0px;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0px;
   width: 100%;
   z-index: 10;
 
   .inner {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-size: 161px;
     background-repeat: repeat;
-    background-image: url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png);
+    background-image: url('@/assets/images/frame-background.png');
     opacity: 0.04;
     border-radius: 0px;
   }
