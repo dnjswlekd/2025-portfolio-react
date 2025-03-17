@@ -29,9 +29,21 @@ function HomeSkill() {
           </Link>
         </div>
         <div className="content">
-          <div className="content-box"></div>
-          <div className="content-box"></div>
-          <div className="content-box"></div>
+          <div className="content-box">
+            <span>1</span>
+            <h1>web</h1>
+            <p>html5, css3, js, jquery, vue, react, sass(scss)</p>
+          </div>
+          <div className="content-box">
+            <span>2</span>
+            <h1>design</h1>
+            <p>figma, photoshop, illustrator, indesign</p>
+          </div>
+          <div className="content-box">
+            <span>3</span>
+            <h1>collaboration</h1>
+            <p>notion, git, gitlab github, sourcetree</p>
+          </div>
         </div>
       </div>
     </div>
