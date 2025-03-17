@@ -9,7 +9,7 @@ import myProfileImg from '@/assets/images/myProfile.jpg';
 function HomeAboutMe() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0,
+    threshold: 0.7,
   });
 
   return (

@@ -8,7 +8,7 @@ import '@/components/Home/styles/HomeSkill.scss';
 function HomeSkill() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0,
+    threshold: 0.7,
   });
 
   return (
