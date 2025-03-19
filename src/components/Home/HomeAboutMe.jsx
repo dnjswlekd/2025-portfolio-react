@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '@/components/Buttons/Button';
-
 import '@/components/Home/styles/HomeAbout.scss';
 import myProfileImg from '@/assets/images/myProfile.jpg';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function HomeAboutMe() {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.7,
   });
+
+  const textBoxRef = useRef(null);
+
+  useEffect(() => {
+    if (inView && textBoxRef.current) {
+      const elements = textBoxRef.current.querySelectorAll('p, li');
+
+      gsap.fromTo(
+        elements,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: textBoxRef.current,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
+      );
+    }
+  }, [inView]); // inView가 변경될 때마다 실행
 
   return (
     <div
@@ -33,7 +60,7 @@ function HomeAboutMe() {
               <Button label="View More" />
             </Link>
           </div>
-          <div className="text-box">
+          <div className="text-box" ref={textBoxRef}>
             <section className="personal">
               <p>
                 <span>이름 :</span> 박원지
@@ -67,8 +94,8 @@ function HomeAboutMe() {
                 <li>· 2020.02 - 2021.06 국회사무처 인턴</li>
                 <li>
                   · 2023.05 ~ 2023.07 기업요구를 반영한 디지털비즈니스
-                  웹앱(UX)디자인 <br />{' '}
-                  <p className="indent"> & 개발자 양성과정 멘토링 활동</p>
+                  웹앱(UX)디자인
+                  <p className="indent">& 개발자 양성과정 멘토링 활동</p>
                 </li>
                 <li>· 2023.07 ~ 2025.01 이쓰리티에스 UI/UX 퍼블리셔</li>
               </ul>

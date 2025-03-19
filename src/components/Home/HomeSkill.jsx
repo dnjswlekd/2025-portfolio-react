@@ -32,7 +32,7 @@ function HomeSkill() {
           <div className="content-box">
             <span>1</span>
             <h1>web</h1>
-            <p>html5, css3, js, jquery, vue, react, sass(scss)</p>
+            <p>html5, css3, js, jquery, vue, react, scss(sass)</p>
           </div>
           <div className="content-box">
             <span>2</span>
@@ -42,7 +42,7 @@ function HomeSkill() {
           <div className="content-box">
             <span>3</span>
             <h1>collaboration</h1>
-            <p>notion, git, gitlab github, sourcetree</p>
+            <p>notion, git, gitlab, github, sourcetree</p>
           </div>
         </div>
       </div>
