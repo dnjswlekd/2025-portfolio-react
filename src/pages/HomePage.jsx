@@ -30,9 +30,9 @@ function Home() {
         <Button label="View More Skills" />
       </Link> */}
       <Work />
-      <Link to="/work">
+      {/* <Link to="/work">
         <Button label="View More Work" />
-      </Link>
+      </Link> */}
     </div>
   );
 }

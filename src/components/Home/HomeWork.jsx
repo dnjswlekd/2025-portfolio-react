@@ -16,6 +16,9 @@ function HomeWork() {
     >
       {' '}
       <h1>HomeWork</h1>
+      <Link to="/work">
+        <Button label="View More" />
+      </Link>
     </div>
   );
 }
