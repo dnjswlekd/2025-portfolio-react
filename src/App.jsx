@@ -56,7 +56,7 @@ function App() {
   }, [theme]);
 
   return (
-    <Router>
+    <Router basename="/2025-portfolio-react/">
       <div className="frame">
         <div className="inner"></div>
       </div>
