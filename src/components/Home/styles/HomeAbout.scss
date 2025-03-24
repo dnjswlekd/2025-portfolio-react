@@ -25,8 +25,8 @@
       .profile {
         display: flex;
         flex-flow: column;
-        align-items: center;
-        gap: 50px;
+        align-items: flex-end;
+        gap: 20px;
 
         .profile-img {
           flex-shrink: 0;

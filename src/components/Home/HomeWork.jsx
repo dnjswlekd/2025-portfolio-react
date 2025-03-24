@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import Button from '@/components/Buttons/Button';
 
+import '@/components/Home/styles/HomeWork.scss';
+
 function HomeWork() {
   const { ref, inView } = useInView({
     triggerOnce: false,
