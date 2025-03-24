@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 function HomeAboutMe() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.7,
+    threshold: 0,
   });
 
   const textBoxRef = useRef(null);
