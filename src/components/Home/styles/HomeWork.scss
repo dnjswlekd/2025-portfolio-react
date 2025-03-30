@@ -1,19 +1,121 @@
-.home-work {
-  width: 100%;
-  height: 100vh;
-  padding-top: 200px;
-  background-color: var(--header-bg-color);
-  .profile-img {
-    flex-shrink: 0;
-    width: 350px;
-    height: 350px;
+.work-inner {
+  .title {
+    width: 100%;
+    height: 100vh;
+    font-size: 170px;
+    line-height: 0.9;
+    padding-top: 30vh;
+    text-align: center;
 
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-position: center center;
-      object-fit: cover;
+    p {
+      text-transform: capitalize;
+      font-family: 'Public Sans';
     }
+
+    p:nth-child(2) {
+      font-family: 'Cormorant';
+      font-size: 220px;
+    }
+  }
+
+  .work-list {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      width: 45%;
+
+      &:nth-child(2n) {
+        margin-top: 0;
+      }
+
+      a {
+        display: block;
+
+        .img-box {
+          position: relative;
+          z-index: 1;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            content: '';
+            width: 168px;
+            height: 168px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            background: url('/src/assets/Images/readMore2.png') no-repeat
+              center/35px;
+            z-index: 3;
+            transition: all 0.4s;
+            opacity: 0;
+          }
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: '';
+            border-radius: 50%;
+            background: #fff url('/src/assets/Images/readMore3.png') no-repeat
+              center/160px;
+            animation: spin 10s linear infinite;
+            transition: all 0.4s;
+            z-index: 2;
+          }
+
+          img {
+            transition: all 0.35s;
+            width: 100%;
+          }
+        }
+
+        .text-box {
+          h3 {
+            font-size: 35px;
+            font-weight: normal;
+            padding: 20px 0 5px;
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+          }
+        }
+      }
+
+      &:hover {
+        .img-box {
+          img {
+            filter: brightness(0.7);
+          }
+
+          &::before {
+            opacity: 1;
+          }
+
+          &::after {
+            width: 168px;
+            height: 168px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

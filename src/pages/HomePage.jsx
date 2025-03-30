@@ -6,6 +6,7 @@ import Button from '@/components/Buttons/Button';
 import Main from '@/components/Home/HomeMain';
 import AboutMe from '@/components/Home/HomeAboutMe';
 import Skill from '@/components/Home/HomeSkill';
+import Skill2 from '@/components/Home/HomeSkill2';
 import Work from '@/components/Home/HomeWork';
 
 function Home() {
@@ -22,17 +23,9 @@ function Home() {
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-      {/* <Link to="/about">
-        <Button label="View More About Me" />
-      </Link> */}
       <Skill />
-      {/* <Link to="/skill">
-        <Button label="View More Skills" />
-      </Link> */}
       <Work />
-      {/* <Link to="/work">
-        <Button label="View More Work" />
-      </Link> */}
+      <Skill2 />
     </div>
   );
 }
