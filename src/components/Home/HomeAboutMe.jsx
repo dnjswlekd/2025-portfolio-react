@@ -104,16 +104,6 @@ function HomeAboutMe() {
           </div>
         </div>
       </div>
-
-      <div className="text-loop">
-        <ul>
-          <li>wonji portfolio process</li>
-          <li>wonji portfolio process</li>
-          <li>wonji portfolio process</li>
-          <li>wonji portfolio process</li>
-          <li>wonji portfolio process</li>
-        </ul>
-      </div>
     </div>
   );
 }

@@ -69,4 +69,50 @@
       }
     }
   }
+
+  .skill-loop {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    white-space: nowrap;
+    display: flex;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 10%,
+      rgb(0, 0, 0) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    ul {
+      display: flex;
+      gap: 60px;
+      animation: img-loop 55s linear infinite;
+      width: max-content; // 요소 크기만큼 자동 조정
+
+      li {
+        text-transform: capitalize;
+        width: 100px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center center;
+        }
+        &:nth-child(8) {
+          width: 130px;
+        }
+      }
+    }
+  }
+
+  @keyframes img-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

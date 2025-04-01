@@ -5,6 +5,30 @@ import Button from '@/components/Buttons/Button';
 
 import '@/components/Home/styles/HomeSkill.scss';
 
+const skills = {
+  skill: [
+    'html',
+    'css',
+    'js',
+    'sass',
+    'jquery',
+    'vue',
+    'react',
+    'figma',
+    'photoshop',
+    'illustrator',
+    'indesign',
+    'notion',
+    'git',
+    'gitlab',
+    'github',
+  ],
+};
+
+const getImageUrl = (name) => {
+  return new URL(`/src/assets/images/${name}-icon.png`, import.meta.url).href;
+};
+
 function HomeSkill() {
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -45,6 +69,15 @@ function HomeSkill() {
             <p>notion, git, gitlab, github, sourcetree</p>
           </div>
         </div>
+      </div>
+      <div className="skill-loop">
+        <ul>
+          {[...skills.skill, ...skills.skill].map((skill, index) => (
+            <li key={index}>
+              <img src={getImageUrl(skill)} alt={skill} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

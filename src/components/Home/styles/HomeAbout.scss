@@ -90,24 +90,6 @@
     }
   }
 }
-.text-loop {
-  position: relative;
-  overflow: hidden;
-  padding-top: 100px;
-
-  ul {
-    display: flex;
-    white-space: nowrap;
-    font-size: 145px;
-    letter-spacing: -2px;
-
-    li {
-      text-transform: capitalize;
-      animation: text-loop 6s linear infinite;
-      padding: 0 30px;
-    }
-  }
-}
 
 @keyframes gradient-animation {
   0% {
