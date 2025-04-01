@@ -97,7 +97,7 @@ function HomeWork() {
         scrollTrigger: {
           trigger: '.work-list',
           start: '100% 50%',
-          end: '100% 0%',
+          end: '100% 100%',
           scrub: 1,
           markers: false,
         },
@@ -125,44 +125,69 @@ function HomeWork() {
         <ul className="work-list">
           {[
             {
-              imgSrc: interpark,
-              title: 'Interpark',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
-            },
-            {
-              imgSrc: naver,
-              title: 'Naver',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
-            },
-            {
-              imgSrc: insightMain,
-              title: 'Insight Main',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
-            },
-            {
-              imgSrc: insightDetail,
-              title: 'Insight Detail',
+              imgSrc: insightCategory,
+              title: '병원 전용 그룹웨어',
               category: 'UI/UX Design, Web Publishing',
               year: '2025',
             },
             {
               imgSrc: insightCategory,
-              title: 'Insight Category',
+              title: '병원 전용 주차관제',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: insightCategory,
+              title: '이브로셔 메인, 상세페이지',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: insightMain,
+              title: '강의사이트 UI/UX 디자인 및 퍼블리싱',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: insightDetail,
+              title: 'gsap을 활용한 인터랙티브 사이트',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+
+            {
+              imgSrc: B2Bdark,
+              title: '피그마를 활용한 디자인시스템 구축',
               category: 'UI/UX Design, Web Publishing',
               year: '2025',
             },
             {
               imgSrc: B2Bdark,
-              title: 'B2B Dark',
+              title: '디자인시스템을 활용한 B2B 사이트',
               category: 'UI/UX Design, Web Publishing',
               year: '2025',
             },
             {
               imgSrc: B2Blight,
-              title: 'B2B Light',
+              title: '디자인시스템을 활용한 B2C 사이트',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: B2Blight,
+              title: '디자인시스템을 활용한 모바일 OTT',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: interpark,
+              title: '인터파크 클론코딩',
+              category: 'UI/UX Design, Web Publishing',
+              year: '2025',
+            },
+            {
+              imgSrc: naver,
+              title: '네이버 클론코딩',
               category: 'UI/UX Design, Web Publishing',
               year: '2025',
             },
@@ -176,10 +201,10 @@ function HomeWork() {
             />
           ))}
         </ul>
+        {/* <Link to="/work">
+          <Button label="View More" />
+        </Link> */}
       </div>
-      <Link to="/work">
-        <Button label="View More" />
-      </Link>
     </div>
   );
 }

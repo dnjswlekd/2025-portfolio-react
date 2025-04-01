@@ -20,7 +20,8 @@
     .content {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 70px;
 
       .profile {
         display: flex;
@@ -30,8 +31,8 @@
 
         .profile-img {
           flex-shrink: 0;
-          width: 400px;
-          height: 400px;
+          width: 370px;
+          height: 370px;
           img {
             width: 100%;
             height: 100%;

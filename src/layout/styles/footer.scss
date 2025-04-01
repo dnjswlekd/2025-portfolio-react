@@ -1,10 +1,11 @@
 .footer {
   padding-top: 20px;
   padding: 40px 30px;
-  background-color: var(--header-bg-color);
-  color: var(--header-bg-active-color);
+  background-color: var(--tertiary-bg-color);
+  color: var(--tertiary-text-color);
   line-height: 1.6;
   font-weight: 300;
+  border-top: 1px solid var(--secondary-border-color);
 
   .inner {
     max-width: 1080px;
@@ -17,13 +18,24 @@
       display: flex;
       justify-content: space-between;
 
+      h1 {
+        text-decoration: none;
+        color: var(--tertiary-text-color);
+        display: flex;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: rgba(20, 20, 20, 0);
+        box-shadow: var(--header-hover-box-shadow);
+        padding: 10px 15px;
+        border-radius: 11px;
+      }
+
       ul {
         display: flex;
         gap: 30px;
 
         li {
           a {
-            color: var(--header-text-color);
+            color: var(--tertiary-text-color);
             text-decoration: none;
           }
         }
@@ -32,7 +44,7 @@
 
     .right {
       color: #9c9c9c;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--secondary-border-color);
       padding-top: 30px;
       span {
         display: block;

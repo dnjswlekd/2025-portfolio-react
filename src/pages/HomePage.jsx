@@ -6,8 +6,8 @@ import Button from '@/components/Buttons/Button';
 import Main from '@/components/Home/HomeMain';
 import AboutMe from '@/components/Home/HomeAboutMe';
 import Skill from '@/components/Home/HomeSkill';
-import Skill2 from '@/components/Home/HomeSkill2';
 import Work from '@/components/Home/HomeWork';
+import Contact from '@/components/Home/HomeContact';
 
 function Home() {
   const aboutMeRef = useRef(null);
@@ -25,7 +25,7 @@ function Home() {
       </div>
       <Skill />
       <Work />
-      <Skill2 />
+      <Contact />
     </div>
   );
 }

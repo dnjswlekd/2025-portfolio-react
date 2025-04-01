@@ -14,7 +14,7 @@ function Footer() {
     <footer className="footer">
       <div className="inner">
         <div className="left">
-          <div>logo</div>
+          <h1>WONJI</h1>
           <ul>
             {navLinks.map((link) => (
               <li key={link.to}>

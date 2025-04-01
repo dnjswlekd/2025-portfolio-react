@@ -41,6 +41,12 @@
       .logo {
         text-decoration: none;
         color: var(--header-text-color);
+        display: flex;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: rgba(20, 20, 20, 0);
+        box-shadow: var(--header-hover-box-shadow);
+        padding: 10px 15px;
+        border-radius: 11px;
       }
 
       ul {

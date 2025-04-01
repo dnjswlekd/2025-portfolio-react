@@ -7,7 +7,7 @@ function Header({ theme, toggleTheme }) {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About Me' },
-    { to: '/skill', label: 'Skills' },
+    // { to: '/skill', label: 'Skills' },
     { to: '/work', label: 'Work' },
   ];
 
@@ -17,7 +17,8 @@ function Header({ theme, toggleTheme }) {
         <div className="menu">
           {/* 로고를 클릭할 때 홈으로 이동하도록 변경 */}
           <NavLink to="/" className="logo">
-            <h1>wonji logo</h1>
+            {/* <img src="src/assets/images/logo.png" alt="" /> */}
+            <h1>WONJI</h1>
           </NavLink>
           <nav>
             <ul className="nav-links">
