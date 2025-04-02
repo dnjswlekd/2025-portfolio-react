@@ -1,4 +1,3 @@
-// components/WorkItem.jsx
 import React from 'react';
 
 function WorkItem({ imgSrc, title, category, year }) {

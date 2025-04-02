@@ -7,7 +7,7 @@ function Header({ theme, toggleTheme }) {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About Me' },
-    // { to: '/skill', label: 'Skills' },
+    { to: '/skill', label: 'Skills' },
     { to: '/work', label: 'Work' },
   ];
 
