@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '@/components/Buttons/Button';
 import '@/pages/styles/About.scss';
 import myProfileImg from '@/assets/images/myProfile.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,9 +58,6 @@ function HomeAboutMe() {
             <div className="profile-img">
               <img src={myProfileImg} alt="Profile Image" />
             </div>
-            {/* <Link to="/about">
-              <Button label="자기소개 더보기" />
-            </Link> */}
           </div>
           <div className="text-box" ref={textBoxRef}>
             <div className="signature">
@@ -79,7 +78,12 @@ function HomeAboutMe() {
               맡은 일에 애정을 가지고 책임감 있게 업무를 수행합니다. 주어진
               역할에서 가치를 창출하며, 제 역량을 충분히 발휘하고자 합니다.
             </p>
-            <a href="">자기소개 더보기</a>
+            <Link to="/about">
+              <a className="go-about">
+                자기소개 더보기
+                <FontAwesomeIcon icon={faArrowRight} />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="desc-box">
