@@ -15,6 +15,8 @@ import AboutMe from './pages/AboutPage';
 import Skill from './pages/SkillPage';
 import Work from './pages/WorkPage';
 
+import ScrollToTop from './ScrollToTop';
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -30,6 +32,7 @@ function AnimatedRoutes() {
         nodeRef={nodeRef} // nodeRef 추가
       >
         <div ref={nodeRef}>
+          <ScrollToTop />
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
