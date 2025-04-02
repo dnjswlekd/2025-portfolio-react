@@ -10,6 +10,10 @@ function Footer() {
     { to: '/work', label: 'Work' },
   ];
 
+  const handleScrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="footer">
       <div className="inner">
@@ -19,6 +23,7 @@ function Footer() {
             {navLinks.map((link) => (
               <li key={link.to}>
                 <NavLink
+                  onClick={handleScrollTop}
                   to={link.to}
                   className={({ isActive }) => (isActive ? 'active' : '')}
                   aria-current={
