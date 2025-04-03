@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Button from '@/components/Buttons/Button';
 import '@/pages/styles/About.scss';
 import myProfileImg from '@/assets/images/myProfile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

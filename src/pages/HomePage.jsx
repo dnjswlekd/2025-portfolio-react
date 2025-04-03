@@ -6,7 +6,7 @@ import Button from '@/components/Buttons/Button';
 import Main from '@/components/Home/HomeMain';
 import AboutMe from '@/components/Home/HomeAboutMe';
 import Skill from '@/components/Home/HomeSkill';
-// import Work from '@/components/Home/HomeWork';
+import Work from '@/components/Home/HomeWork';
 import Contact from '@/components/Home/HomeContact';
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
         <AboutMe />
       </div>
       <Skill />
-      {/* <Work /> */}
+      <Work />
       <Contact />
     </div>
   );

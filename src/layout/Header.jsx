@@ -8,7 +8,7 @@ function Header({ theme, toggleTheme }) {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About Me' },
     { to: '/skill', label: 'Skills' },
-    { to: '/work', label: 'Work' },
+    { to: '/work', label: 'Work & Project' },
   ];
 
   return (
