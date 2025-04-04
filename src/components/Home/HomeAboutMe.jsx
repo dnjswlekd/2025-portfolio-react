@@ -77,11 +77,9 @@ function HomeAboutMe() {
               맡은 일에 애정을 가지고 책임감 있게 업무를 수행합니다. 주어진
               역할에서 가치를 창출하며, 제 역량을 충분히 발휘하고자 합니다.
             </p>
-            <Link to="/about">
-              <a className="go-about">
-                자기소개 더보기
-                <FontAwesomeIcon icon={faArrowRight} />
-              </a>
+            <Link to="/about" className="go-about">
+              자기소개 더보기
+              <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         </div>

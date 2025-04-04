@@ -11,6 +11,7 @@ const skills = {
     'css',
     'js',
     'sass',
+    'tailwind',
     'jquery',
     'vue',
     'react',
@@ -56,7 +57,7 @@ function HomeSkill() {
           <div className="content-box">
             <span>1</span>
             <h1>web</h1>
-            <p>html5, css3, js, jquery, vue, react, scss(sass)</p>
+            <p>html5, css3, js, jquery, vue, react, scss(sass), tailwind</p>
           </div>
           <div className="content-box">
             <span>2</span>

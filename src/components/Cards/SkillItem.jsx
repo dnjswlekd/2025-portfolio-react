@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WorkItem({ imgSrc, title, category, year }) {
+function SkillItem({ imgSrc, title, category, year }) {
   return (
     <li>
       <a href="#">
@@ -19,4 +19,4 @@ function WorkItem({ imgSrc, title, category, year }) {
   );
 }
 
-export default WorkItem;
+export default SkillItem;

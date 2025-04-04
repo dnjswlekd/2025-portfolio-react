@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@/components/Buttons/Button';
-import WorkItem from '@/components/Cards/WorkItem';
+import SkillItem from '@/components/Cards/SkillItem';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -192,7 +192,7 @@ function HomeWork() {
               year: '2025',
             },
           ].map((item, index) => (
-            <WorkItem
+            <SkillItem
               key={index}
               imgSrc={item.imgSrc}
               title={item.title}
