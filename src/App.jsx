@@ -16,8 +16,9 @@ import Skill from './pages/SkillPage';
 import Work from './pages/WorkPage';
 
 import ScrollToTop from './ScrollToTop';
+import ScrollTopButton from '@/components/Buttons/ScrollTopButton';
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ theme }) {
   const location = useLocation();
 
   // nodeRef 객체 생성 (React 18에서 findDOMNode 대신 사용)
@@ -33,8 +34,9 @@ function AnimatedRoutes() {
       >
         <div ref={nodeRef}>
           <ScrollToTop />
+          <ScrollTopButton />
           <Routes location={location}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home theme={theme} />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/skill" element={<Skill />} />
             <Route path="/work" element={<Work />} />
@@ -65,7 +67,7 @@ function App() {
       </div>
       <div className={`App ${theme}`}>
         <Header theme={theme} toggleTheme={toggleTheme} />
-        <AnimatedRoutes />
+        <AnimatedRoutes theme={theme} />
         <Footer />
       </div>
     </Router>

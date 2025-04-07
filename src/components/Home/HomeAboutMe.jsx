@@ -7,16 +7,20 @@ import '@/pages/styles/About.scss';
 import myProfileImg from '@/assets/images/myProfile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import signature from '@/assets/images/signature.png';
+import signatureSub from '@/assets/images/signature-sub.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function HomeAboutMe() {
+function HomeAboutMe({ theme }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0,
   });
 
   const textBoxRef = useRef(null);
+
+  const signatureSrc = theme === 'dark' ? signatureSub : signature;
 
   useEffect(() => {
     if (inView && textBoxRef.current) {
@@ -60,7 +64,7 @@ function HomeAboutMe() {
           </div>
           <div className="text-box" ref={textBoxRef}>
             <div className="signature">
-              <img src="src/assets/images/signature.png" alt="" />
+              <img src={signatureSrc} alt="시그니처" />
             </div>
             <p>안녕하세요! 2년 차 웹 퍼블리셔 박원지입니다.</p>
             <p>

@@ -38,8 +38,8 @@
         max-width: 380px;
         width: 100%;
         min-height: 237px;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--primary-text-color);
+        color: var(--primary-bg-color);
         border-radius: 20px;
         padding: 20px;
         transition: 0.35s;
@@ -93,12 +93,11 @@
       display: flex;
       gap: 60px;
       animation: img-loop 55s linear infinite;
-      width: max-content; // 요소 크기만큼 자동 조정
-
+      width: max-content;
       li {
         text-transform: capitalize;
         width: 100px;
-        transition: 0.35s;
+        transition: 0.2s;
 
         img {
           width: 100%;
@@ -106,7 +105,7 @@
           object-fit: contain;
           object-position: center center;
         }
-        &:nth-child(8) {
+        &:nth-child(9) {
           width: 125px;
         }
 

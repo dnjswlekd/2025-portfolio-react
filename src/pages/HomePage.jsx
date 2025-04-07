@@ -9,7 +9,7 @@ import Skill from '@/components/Home/HomeSkill';
 import Work from '@/components/Home/HomeWork';
 import Contact from '@/components/Home/HomeContact';
 
-function Home() {
+function Home({ theme }) {
   const aboutMeRef = useRef(null);
 
   const scrollToAboutMe = () => {
@@ -21,7 +21,7 @@ function Home() {
     <div className="main">
       <Main onScrollToAboutMe={scrollToAboutMe} />
       <div ref={aboutMeRef}>
-        <AboutMe />
+        <AboutMe theme={theme} />
       </div>
       <Skill />
       <Work />

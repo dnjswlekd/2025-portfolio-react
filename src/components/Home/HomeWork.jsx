@@ -1,5 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
+import Button from '@/components/Buttons/Button';
 import WorkContent from '@/components/Cards/WorkContent';
 
 import '@/components/Home/styles/HomeWork.scss';
@@ -75,9 +77,14 @@ function HomeWork() {
       ref={ref}
     >
       <div className="inner">
-        <div>
-          <h1 className="title">Work & Project</h1>
-          <div className="badge"></div>
+        <div className="title-wrap">
+          <div>
+            <h1 className="title">Work & Project</h1>
+            <div className="badge"></div>
+          </div>
+          <Link to="/work">
+            <Button label="View More" />
+          </Link>
         </div>
         <div className="container">
           <article>
