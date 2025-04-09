@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/WorkContent.scss';
 
 const WorkContent = ({
   link,
@@ -11,7 +12,7 @@ const WorkContent = ({
   contribution,
 }) => {
   return (
-    <div className="content">
+    <div className="work-content">
       <a
         href={link}
         className="preview"
@@ -46,10 +47,6 @@ const WorkContent = ({
             ))}
           </div>
         )}
-        {/* <div className="contribution">
-          <h4>기여도:</h4>
-          <span>{contribution}</span>
-        </div> */}
       </div>
     </div>
   );

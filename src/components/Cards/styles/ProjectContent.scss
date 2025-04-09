@@ -1,0 +1,23 @@
+@use '@/styles/mixins' as mixin;
+
+.project-content {
+  text-align: center;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-block: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.7;
+    letter-spacing: -0.4px;
+    text-align: left;
+  }
+}

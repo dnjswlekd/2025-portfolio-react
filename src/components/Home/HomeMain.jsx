@@ -3,21 +3,25 @@ import Button from '@/components/Buttons/Button';
 import '@/components/Home/styles/HomeMain.scss';
 
 import interpark from '@/assets/images/homeWork-interpark.png';
-import naver from '@/assets/images/homeWork-naver.png';
 import insightMain from '@/assets/images/homeWork-insight-main.png';
 import insightDetail from '@/assets/images/homeWork-insight-detail.png';
 import insightCategory from '@/assets/images/homeWork-insight-category.png';
-import B2Bdark from '@/assets/images/homeWork-b2c-dark.png';
-import B2Blight from '@/assets/images/homeWork-b2c-light.png';
+import B2Cdark from '@/assets/images/homeWork-b2c-dark.png';
+import B2Clight from '@/assets/images/homeWork-b2c-light.png';
+import B2B from '@/assets/images/work-b2b.png';
+import designSystem from '@/assets/images/work-design-system.png';
+import ott from '@/assets/images/work-ott.png';
 
 const images = [
   interpark,
-  naver,
   insightMain,
   insightDetail,
   insightCategory,
-  B2Bdark,
-  B2Blight,
+  B2Cdark,
+  B2Clight,
+  B2B,
+  designSystem,
+  ott,
 ];
 
 function HomeMain({ onScrollToAboutMe }) {

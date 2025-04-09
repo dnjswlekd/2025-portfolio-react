@@ -2,13 +2,15 @@
 
 .home-work {
   width: 100%;
-  padding-top: 200px;
-  // background-color: #fafafa;
+  padding-block: 200px 100px;
+  opacity: 1;
+  background-color: var(--tertiary-bg-color);
 
   .inner {
     position: relative;
     max-width: 1080px;
     margin: 0 auto;
+
     .title-wrap {
       position: relative;
       display: flex;
@@ -32,138 +34,36 @@
         h2 {
           font-size: 2rem;
         }
+
         .contents {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 0 2rem;
-          justify-content: center;
+          gap: 2rem;
           justify-items: center;
+        }
 
-          .content {
-            margin-block: 2rem 1rem;
-            .preview {
-              position: relative;
-              display: inline-block;
-              overflow: hidden;
-              width: 100%;
-              height: auto;
-              border-radius: 20px;
-              cursor: pointer;
-              box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
-
-              img {
-                position: relative;
-                width: 100%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                transition: transform 0.3s ease-in-out;
-                &:hover {
-                  transform: scale(1.1) translateX(20px);
-                  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-                }
-              }
-
-              &::after {
-                position: absolute;
-                display: inline-block;
-                content: attr(data-contribution);
-                background: #ddd;
-                width: fit-content;
-                height: auto;
-                padding: 8px 11px;
-                border-radius: 0 0 0 8px;
-                color: #000;
-                top: 0;
-                right: 0;
-                font-size: 0.8rem;
-                font-weight: bold;
-              }
-              &[data-contribution='기여도 100%']::after {
-                background: #007bff;
-                color: #fff;
-              }
-
-              &[data-contribution='기여도 40%']::after {
-                background: #ffa500;
-                color: #fff;
-              }
-            }
-
-            .desc {
-              display: flex;
-              flex-flow: column;
-              gap: 1.3rem;
-              margin-left: 0.5rem;
-
-              .intro {
-                margin-block: 1.9rem 0;
-                h3 {
-                  font-weight: 600;
-                  font-size: 1.5rem;
-                  margin-block: 0.7rem;
-                }
-              }
-
-              h5 {
-                font-size: 1.1rem;
-                font-weight: 500;
-                opacity: 0.7;
-              }
-
-              .explain {
-                position: relative;
-                line-height: 1.5;
-
-                h4 {
-                  display: block;
-                  border-bottom: 1px solid var(--secondary-border-color);
-                  margin-bottom: 0.5rem;
-                  padding-bottom: 0.7rem;
-                }
-
-                span {
-                  display: inline-block;
-                  position: relative;
-                  margin-right: 20px;
-                  text-transform: capitalize;
-                  letter-spacing: -0.4px;
-
-                  &:not(:last-child)::after {
-                    content: '';
-                    position: absolute;
-                    width: 3px;
-                    height: 3px;
-                    background-color: var(--tertiary-text-color);
-                    border-radius: 50%;
-                    top: 50%;
-                    left: calc(100% + 7px);
-                    transform: translateY(-50%);
-                  }
-                }
-              }
-
-              .contribution {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-              }
-            }
-
-            &:nth-child(1) .preview {
-              background: #f4eafb;
-            }
-            &:nth-child(2) .preview {
-              background: #fff5e4;
-            }
-            &:nth-child(3) .preview {
-              background: #e2f2e2;
-            }
-            &:nth-child(4) .preview {
-              background: #d7eef5;
-            }
+        &.project {
+          h2 {
+            margin-bottom: 2rem;
+          }
+          .contents {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       }
     }
+  }
+}
+
+.work,
+.project {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
