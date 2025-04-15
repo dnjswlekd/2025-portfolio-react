@@ -2,7 +2,8 @@
 
 .home-work {
   width: 100%;
-  margin-block: 200px 100px;
+  margin-block: 50px;
+  padding-block: 100px;
   background-color: var(--tertiary-bg-color);
   opacity: 1;
 
@@ -46,18 +47,20 @@
         h2 {
           font-size: 2rem;
           margin-bottom: 2rem;
+          text-transform: uppercase;
         }
 
         .contents {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
+          gap: 0rem 2rem;
           justify-items: center;
         }
 
         &.project {
           .contents {
             grid-template-columns: repeat(3, 1fr);
+            gap: 4rem 2rem;
           }
         }
       }
