@@ -1,0 +1,39 @@
+.work-page {
+  width: 100%;
+
+  .inner {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    .intro-view {
+      height: 80vh;
+    }
+
+    h1 {
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    .work-section {
+      padding-block: 11rem 5rem;
+
+      .work-section-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .project-section {
+        padding-block: 3rem 5rem;
+
+        .project-layout {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .content-box {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

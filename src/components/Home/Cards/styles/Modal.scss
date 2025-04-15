@@ -1,0 +1,174 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+// work-content
+.work-content {
+  margin-block: 2rem 1rem;
+
+  .modal-img {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
+
+    img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: attr(data-contribution);
+      background: #ddd;
+      padding: 8px 11px;
+      border-radius: 0 0 0 8px;
+      color: #000;
+      top: 0;
+      right: 0;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    &[data-contribution='기여도 100%']::after {
+      background: #007bff;
+      color: #fff;
+    }
+
+    &[data-contribution='기여도 40%']::after {
+      background: #ffa500;
+      color: #fff;
+    }
+  }
+
+  .modal-desc {
+    display: flex;
+    flex-flow: column;
+    gap: 1.3rem;
+    margin-left: 0.5rem;
+
+    .intro {
+      margin-block: 1.9rem 0;
+      display: flex;
+      align-items: baseline;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 10px;
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-block: 0.7rem;
+      }
+    }
+
+    h5 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      opacity: 0.7;
+    }
+
+    .explain {
+      line-height: 1.5;
+
+      h4 {
+        border-bottom: 1px solid var(--secondary-border-color);
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.7rem;
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        text-transform: capitalize;
+        letter-spacing: -0.4px;
+
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          background-color: var(--tertiary-text-color);
+          border-radius: 50%;
+          top: 50%;
+          left: calc(100% + 7px);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  // 배경색 커스터마이징
+  &:nth-child(1) .modal-img {
+    background: #f4eafb;
+  }
+
+  &:nth-child(2) .modal-img {
+    background: #fff5e4;
+  }
+
+  &:nth-child(3) .modal-img {
+    background: #e2f2e2;
+  }
+
+  &:nth-child(4) .modal-img {
+    background: #d7eef5;
+  }
+}
+
+// 간단한 페이드 인 애니메이션
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

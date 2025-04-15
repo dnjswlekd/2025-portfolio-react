@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/WorkContent.scss';
+import './styles/HomeWorkItem.scss';
 
 const WorkContent = ({
   link,
@@ -10,14 +10,15 @@ const WorkContent = ({
   tasks,
   features,
   contribution,
+  onClick,
 }) => {
   return (
-    <div className="work-content">
+    <div className="work-content" onClick={onClick}>
       <a
-        href={link}
+        // href={link}
         className="preview"
-        target="_blank"
-        rel="noopener noreferrer"
+        // target="_blank"
+        // rel="noopener noreferrer"
         data-contribution={`기여도 ${contribution}`}
       >
         <img src={imageSrc} alt={title} />

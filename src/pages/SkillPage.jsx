@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@/components/Buttons/Button';
-import SkillItem from '@/components/Cards/SkillItem';
+import SkillItem from '@/components/SkillItem';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './styles/SectionWork.scss';
+import './styles/WorkItem.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,33 +60,29 @@ const SectionWork = ({ data, sectionRef }) => {
         duration: 1.2,
         ease: 'power2.out',
       });
-    }, sectionRef); // ✅ 여기에 DOM이 연결된 ref 넘기기
+    }, sectionRef);
 
     return () => ctx.revert();
   }, [sectionClass, sectionRef]);
 
   return (
-    <section className={`work-section ${sectionClass}`} ref={sectionRef}>
+    <section className={`work-item ${sectionClass}`} ref={sectionRef}>
       <div className="inner">
         <ul className="content-box">
-          <li className="left">
+          <li className="top">
             <a href="#">
               <p className="img">
                 <img src={imgSrc} alt={title} />
               </p>
             </a>
           </li>
-          <li className="right">
-            <h2
-              className="title en animate"
-              data-animate="motion"
-              data-splitting
-            >
+          <li className="bottom">
+            <h2 className="title">
               {title}
               <br />
               <span>{span}</span>
             </h2>
-            <div className="text-box animate" data-animate="motion">
+            <div className="text-box " data-animate="motion">
               <p className="eng en1">{eng}</p>
               <p className="kor en3">{kor}</p>
               <ul className="skill en">

@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/ProjectContent.scss';
+import './styles/HomeProjectItem.scss';
 
 function ProjectContent({ imageSrc, title, desc }) {
   return (

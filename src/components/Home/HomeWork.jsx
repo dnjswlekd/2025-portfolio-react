@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import Button from '@/components/Buttons/Button';
-import WorkContent from '@/components/Cards/WorkContent';
-import ProjectContent from '@/components/Cards/ProjectContent';
+import HomeWorkItem from '@/components/Home/Cards/HomeWorkItem';
+import HomeProjectItem from '@/components/Home/Cards/HomeProjectItem';
+import Modal from '@/components/Home/Cards/Modal';
 
 import '@/components/Home/styles/HomeWork.scss';
 
@@ -113,6 +114,19 @@ function HomeWork() {
   const { ref: workRef, inView: workInView } = useInView();
   const { ref: projectRef, inView: projectInView } = useInView();
 
+  const [selectedWork, setSelectedWork] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleItemClick = (work) => {
+    setSelectedWork(work);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedWork(null);
+  };
+
   return (
     <div
       className={`section home-work animate ${inView ? 'animate-visible' : ''}`}
@@ -136,7 +150,11 @@ function HomeWork() {
             <h2>Work</h2>
             <div className="contents">
               {workData.map((work, index) => (
-                <WorkContent key={index} {...work} />
+                <HomeWorkItem
+                  key={index}
+                  {...work}
+                  onClick={() => handleItemClick(work)}
+                />
               ))}
             </div>
           </article>
@@ -148,12 +166,15 @@ function HomeWork() {
             <h2>Project</h2>
             <div className="contents">
               {projectData.map((project, index) => (
-                <ProjectContent key={index} {...project} />
+                <HomeProjectItem key={index} {...project} />
               ))}
             </div>
           </article>{' '}
         </div>
       </div>
+      {isModalOpen && selectedWork && (
+        <Modal data={selectedWork} onClose={handleCloseModal} />
+      )}
     </div>
   );
 }
