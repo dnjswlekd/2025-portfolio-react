@@ -19,9 +19,10 @@
 
     .content {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       gap: 70px;
+      margin-block: 5rem;
 
       .profile {
         display: flex;
@@ -51,21 +52,36 @@
         color: var(--tertiary-text-color);
         font-weight: 500;
 
-        section {
-          p {
-            span {
-              width: 120px;
-            }
-          }
+        p {
+          line-height: 2;
         }
-        .certifications,
-        .experience,
-        .licenses {
-          list-style: circle;
+      }
+    }
 
-          .indent {
-            text-indent: 12px;
-          }
+    .desc-box {
+      margin-top: 5rem;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          margin: 1rem 0;
+        }
+      }
+
+      .work {
+        flex: 1;
+        margin: 0 2rem 2rem 0;
+
+        &:last-child {
+          grid-column: 1 / -1;
         }
       }
     }
