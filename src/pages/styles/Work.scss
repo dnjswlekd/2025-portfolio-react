@@ -1,23 +1,35 @@
+@use '@/styles/mixins' as mixin;
+
 .work-page {
   width: 100%;
+  padding-block: 13rem 10rem;
 
   .inner {
     position: relative;
     max-width: 1080px;
     margin: 0 auto;
 
+    .title {
+      @include mixin.home-title;
+      text-align: center;
+    }
+
+    .badge {
+      @include mixin.badge;
+      top: -32px;
+      left: 26%;
+    }
+
     .intro-view {
       height: 80vh;
     }
 
     h1 {
-      padding: 0 20px;
+      padding: 10px 40px 20px;
       margin: 0 auto;
     }
 
     .work-section {
-      padding-block: 11rem 5rem;
-
       .work-section-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

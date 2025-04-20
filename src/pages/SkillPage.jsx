@@ -7,13 +7,25 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import '@/pages/styles/Skill.scss';
 
 // 이미지 import
-import interpark from '@/assets/images/homeWork-interpark.png';
-import naver from '@/assets/images/homeWork-naver.png';
-import insightMain from '@/assets/images/homeWork-insight-main.png';
-import insightDetail from '@/assets/images/homeWork-insight-detail.png';
-import insightCategory from '@/assets/images/homeWork-insight-category.png';
-import B2Bdark from '@/assets/images/homeWork-b2c-dark.png';
-import B2Blight from '@/assets/images/homeWork-b2c-light.png';
+import html from '@/assets/images/html-icon.png';
+import css from '@/assets/images/css-icon.png';
+import javascript from '@/assets/images/js-icon.png';
+import jquery from '@/assets/images/jquery-icon.png';
+import vue from '@/assets/images/vue-icon.png';
+import react from '@/assets/images/react-icon.png';
+import sass from '@/assets/images/sass-icon.png';
+import tailwind from '@/assets/images/tailwind-icon.png';
+
+import figma from '@/assets/images/figma-icon.png';
+import photoshop from '@/assets/images/photoshop-icon.png';
+import illustrator from '@/assets/images/illustrator-icon.png';
+import indesign from '@/assets/images/indesign-icon.png';
+
+import notion from '@/assets/images/notion-icon.png';
+import git from '@/assets/images/git-icon.png';
+import gitlab from '@/assets/images/gitlab-icon.png';
+import github from '@/assets/images/github-icon.png';
+import sourcetree from '@/assets/images/sourcetree-icon.png';
 
 // gsap 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
@@ -124,79 +136,96 @@ function HomeWork() {
         <ul className="work-list">
           {[
             {
-              imgSrc: insightCategory,
-              title: '병원 전용 그룹웨어',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: html,
+              title: '0',
+              category: 'HTML',
             },
             {
-              imgSrc: insightCategory,
-              title: '병원 전용 주차관제',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: css,
+              title: '1',
+              category: 'CSS',
             },
             {
-              imgSrc: insightCategory,
-              title: '이브로셔 메인, 상세페이지',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: javascript,
+              title: '2',
+              category: 'JavaScript',
             },
             {
-              imgSrc: insightMain,
-              title: '강의사이트 UI/UX 디자인 및 퍼블리싱',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: jquery,
+              title: '3',
+              category: 'JQuery',
             },
             {
-              imgSrc: insightDetail,
-              title: 'gsap을 활용한 인터랙티브 사이트',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
-            },
-
-            {
-              imgSrc: B2Bdark,
-              title: '피그마를 활용한 디자인시스템 구축',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: vue,
+              title: '4',
+              category: 'Vue',
             },
             {
-              imgSrc: B2Bdark,
-              title: '디자인시스템을 활용한 B2B 사이트',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: react,
+              title: '5',
+              category: 'React',
             },
             {
-              imgSrc: B2Blight,
-              title: '디자인시스템을 활용한 B2C 사이트',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: sass,
+              title: '6',
+              category: 'SCSS(SASS)',
             },
             {
-              imgSrc: B2Blight,
-              title: '디자인시스템을 활용한 모바일 OTT',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: tailwind,
+              title: '7',
+              category: 'Tailwind CSS',
             },
             {
-              imgSrc: interpark,
-              title: '인터파크 클론코딩',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: figma,
+              title: '8',
+              category: 'Figma',
             },
             {
-              imgSrc: naver,
-              title: '네이버 클론코딩',
-              category: 'UI/UX Design, Web Publishing',
-              year: '2025',
+              imgSrc: photoshop,
+              title: '9',
+              category: 'Photoshop',
+            },
+            {
+              imgSrc: illustrator,
+              title: '10',
+              category: 'Illustrator',
+            },
+            {
+              imgSrc: indesign,
+              title: '11',
+              category: 'Indesign',
+            },
+            {
+              imgSrc: notion,
+              title: '12',
+              category: 'Notion',
+            },
+            {
+              imgSrc: git,
+              title: '13',
+              category: 'Git',
+            },
+            {
+              imgSrc: gitlab,
+              title: '14',
+              category: 'Gitlab',
+            },
+            {
+              imgSrc: github,
+              title: '15',
+              category: 'Github',
+            },
+            {
+              imgSrc: sourcetree,
+              title: '16',
+              category: 'Sourcetree',
             },
           ].map((item, index) => (
             <SkillItem
               key={index}
               imgSrc={item.imgSrc}
-              title={item.title}
+              title={`${String(index + 1).padStart(2, '0')}.`}
               category={item.category}
-              year={item.year}
             />
           ))}
         </ul>

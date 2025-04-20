@@ -94,7 +94,7 @@ const SectionWork = ({ data, sectionRef }) => {
           </li>
           <li className="desc-wrap">
             <div className="desc text-box">
-              <div className="intro title">
+              <div className="intro work-title">
                 <span>{duration}</span>
                 <h3>{title}</h3>
               </div>

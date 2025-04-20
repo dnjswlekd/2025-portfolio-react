@@ -1,17 +1,16 @@
 import React from 'react';
 
-function SkillItem({ imgSrc, title, category, year }) {
+function SkillItem({ imgSrc, title, category }) {
   return (
     <li>
       <a href="#">
+        <h3 className="index">{title}</h3>
         <div className="img-box">
           <img src={imgSrc} alt={title} />
         </div>
         <div className="text-box">
-          <h3>{title}</h3>
           <div className="info">
             <p>{category}</p>
-            <p>{year}</p>
           </div>
         </div>
       </a>

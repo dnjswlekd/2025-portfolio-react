@@ -224,6 +224,10 @@ function Work() {
   return (
     <div className="work-page">
       <div className="inner">
+        <div>
+          <h1 className="title">Work & Project</h1>
+          <div className="badge"></div>
+        </div>
         <section className="work-section">
           {/* <h1>Work</h1> */}
           <div className="work-section-wrap">
@@ -237,7 +241,6 @@ function Work() {
           </div>
         </section>
         <section className="project-section">
-          <h1>Project</h1>
           <div className="project-layout">
             {projectItems.map((data, index) => (
               <WorkItem
