@@ -1,4 +1,11 @@
 import React, { useRef } from 'react';
+
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 import WorkItem from '@/components/Work/WorkItem';
 import ProjectItem from '@/components/Work/ProjectItem';
 
@@ -72,142 +79,51 @@ const sectionDataList = [
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/homeWork-insight-main.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/homeWork-insight-main.png',
+    title: '강의 플랫폼 UI/UX 디자인 및 퍼블리싱',
+    desc: '피그마로 UI를 설계하고 컴포넌트 기반으로 구조화한 후, Vue.js와 SCSS로 반응형 퍼블리싱한 강의 사이트입니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/homeWork-interpark.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/homeWork-interpark.png',
+    title: '인터파크 클론코딩',
+    desc: 'HTML, CSS, jQuery를 사용해 인터파크 웹사이트를 클론코딩하고, REST API 형식을 참고해 퍼블리싱했습니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/work-design-system.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/work-design-system.png',
+    title: '피그마를 활용한 디자인 시스템 설계',
+    desc: 'Primitive, Semantic, Theme 컬러를 체계적으로 구성하고, 브랜드 컬러, 이펙트, Border, Spacing, 타이포그래피 등 디자인 토큰을 직접 설계해 디자인 시스템의 기초를 구축했습니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/work-design-system.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/work-design-system.png',
+    title: 'UI 워크스페이스 제작 및 컴포넌트화',
+    desc: '디자인 시스템을 기반으로 Label, Checkbox, Modal, Side Navigation, Pagination 등 주요 UI 요소를 컴포넌트화하여 재사용 가능한 UI 라이브러리를 구축했습니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/work-b2b.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/work-b2b.png',
+    title: '디자인시스템을 활용한 B2B 사이트',
+    desc: '디자인 시스템을 기반으로 정보 구조와 사용자 흐름을 고려해 B2B 환경에 적합한 UI를 설계했습니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/work-b2c.png',
-    title: 'The Dopda',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/work-b2c.png',
+    title: '디자인시스템을 활용한 B2C 사이트',
+    desc: '사용자 친화적인 디자인 시스템을 바탕으로 강의 플랫폼 사용성을 고려한 B2C UI를 구성했습니다.',
   },
   {
     type: 'project',
     sectionClass: 'section02',
-    imgSrc: 'src/assets/images/work-ott.png',
-    title: '병원전용 주차관제 시스템 (모바일)',
-    duration: '2023.10 ~ 2024.02',
-    skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
-    features: [
-      '입차/출차',
-      'vip 입차 등록/관리',
-      '주차이력',
-      '주차정산',
-      '주차 만족도 조사',
-      '주차관제 대시보드',
-      '환경설정',
-      '반응형',
-    ],
-    contribution: '100%',
+    imageSrc: 'src/assets/images/work-ott.png',
+    title: '디자인시스템을 활용한 Mobile OTT',
+    desc: '모바일 사용 경험을 고려한 OTT UI를 디자인 시스템을 활용해 설계하고, 콘텐츠 중심의 레이아웃을 구성했습니다.',
   },
 ];
 
@@ -221,15 +137,65 @@ function Work() {
   const workRefs = useRef(workItems.map(() => React.createRef()));
   const projectRefs = useRef(projectItems.map(() => React.createRef()));
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.work-section', {
+        scrollTrigger: {
+          trigger: '.work-section',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: 'power2.out',
+      });
+      gsap.from('.project-section', {
+        scrollTrigger: {
+          trigger: '.project-section',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: 'power2.out',
+      });
+
+      gsap.from('.intro-text h1', {
+        scrollTrigger: {
+          trigger: '.intro-text',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: 'power2.out',
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="work-page">
       <div className="inner">
-        <div>
-          <h1 className="title">Work & Project</h1>
-          <div className="badge"></div>
-        </div>
         <section className="work-section">
-          {/* <h1>Work</h1> */}
+          <div className="intro">
+            <div className="intro-text">
+              <h1>Work</h1>
+              <div className="desc">
+                <p>
+                  퍼블리셔 경력 1년 7개월간 작업한 저의 결과물을 보실 수
+                  있습니다.
+                </p>
+                <span>
+                  *이미지를 클릭하면 해당 프로젝트의 상세페이지로 이동합니다.
+                </span>
+              </div>
+            </div>
+          </div>
           <div className="work-section-wrap">
             {workItems.map((data, index) => (
               <WorkItem
@@ -241,9 +207,23 @@ function Work() {
           </div>
         </section>
         <section className="project-section">
-          <div className="project-layout">
+          <div className="intro">
+            <div className="intro-text">
+              <h1>Project</h1>
+              <div className="desc">
+                <p>
+                  퍼블리셔 경력 1년 7개월간 작업한 저의 결과물을 보실 수
+                  있습니다.
+                </p>
+                <span>
+                  *이미지를 클릭하면 해당 프로젝트의 상세페이지로 이동합니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="project-section-wrap">
             {projectItems.map((data, index) => (
-              <WorkItem
+              <ProjectItem
                 key={`project-${index}`}
                 data={data}
                 sectionRef={projectRefs.current[index]}

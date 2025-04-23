@@ -2,7 +2,7 @@ import React from 'react';
 import '@/layout/styles/footer.scss';
 import { NavLink } from 'react-router-dom';
 
-function Footer() {
+function Footer({ theme }) {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About Me' },
@@ -10,11 +10,20 @@ function Footer() {
     { to: '/work', label: 'Work' },
   ];
 
+  const logoSrc =
+    theme === 'dark'
+      ? 'src/assets/images/logo-w.png'
+      : 'src/assets/images/logo-b.png';
+
   return (
     <footer className="footer">
       <div className="inner">
         <div className="left">
-          <h1>WONJI</h1>
+          <NavLink to="/" className="logo">
+            <h1>
+              <img src={logoSrc} alt="WONJI 로고" />
+            </h1>
+          </NavLink>
           <ul>
             {navLinks.map((link) => (
               <li key={link.to}>

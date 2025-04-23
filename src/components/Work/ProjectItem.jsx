@@ -1,22 +1,12 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './styles/WorkItem.scss';
+import './styles/ProjectItem.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionWork = ({ data, sectionRef }) => {
-  const {
-    sectionClass,
-    link,
-    imageSrc,
-    title,
-    duration,
-    skills,
-    tasks,
-    features,
-    contribution,
-  } = data;
+  const { sectionClass, link, imageSrc, title, desc } = data;
 
   useEffect(() => {
     if (!sectionRef.current) return; // DOM이 없으면 종료
@@ -76,7 +66,7 @@ const SectionWork = ({ data, sectionRef }) => {
   }, [sectionClass, sectionRef]);
 
   return (
-    <section className={`work-item ${sectionClass}`} ref={sectionRef}>
+    <section className={`project-item ${sectionClass}`} ref={sectionRef}>
       <div className="inner">
         <ul className="content-box">
           <li className="img-wrap">
@@ -85,7 +75,6 @@ const SectionWork = ({ data, sectionRef }) => {
               className="preview"
               target="_blank"
               rel="noopener noreferrer"
-              data-contribution={`기여도 ${contribution}`}
             >
               <p className="img">
                 <img src={imageSrc} alt={title} />
@@ -95,35 +84,10 @@ const SectionWork = ({ data, sectionRef }) => {
           <li className="desc-wrap">
             <div className="desc text-box">
               <div className="intro">
-                <span>{duration}</span>
                 <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
-              <div className="explain">
-                <h4>기술 스택</h4>
-                {skills.map((skill, index) => (
-                  <span key={index}>{skill}</span>
-                ))}
-              </div>
-              <div className="explain">
-                <h4>주요 역할</h4>
-                {tasks.map((task, index) => (
-                  <span key={index}>{task}</span>
-                ))}
-              </div>
-              {features && (
-                <div className="explain">
-                  <h4>주요 기능</h4>
-                  {features.map((feature, index) => (
-                    <span key={index}>{feature}</span>
-                  ))}
-                </div>
-              )}
             </div>
-            <ul className="anchor">
-              {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
           </li>
         </ul>
       </div>

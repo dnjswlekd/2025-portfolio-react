@@ -68,7 +68,7 @@ function App() {
       <div className={`App ${theme}`}>
         <Header theme={theme} toggleTheme={toggleTheme} />
         <AnimatedRoutes theme={theme} />
-        <Footer />
+        <Footer theme={theme} />
       </div>
     </Router>
   );

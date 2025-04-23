@@ -10,7 +10,6 @@
   gap: 10px;
   justify-content: center;
   overflow: hidden;
-  padding: 20px;
 
   .inner {
     display: flex;
@@ -47,6 +46,10 @@
         box-shadow: var(--header-hover-box-shadow);
         padding: 10px 15px;
         border-radius: 11px;
+
+        img {
+          width: 20px;
+        }
       }
 
       ul {
@@ -83,6 +86,47 @@
               box-shadow: var(--header-hover-box-shadow);
             }
           }
+        }
+      }
+
+      /* 모바일 메뉴 */
+      .mobile-nav {
+        display: none; /* 기본적으로 모바일 메뉴 숨기기 */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 200px;
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+
+      /* 햄버거 버튼 */
+      .menu-toggle {
+        display: none; /* 기본적으로 햄버거 버튼 숨기기 */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+
+        .bar {
+          width: 25px;
+          height: 3px;
+          background-color: #000;
         }
       }
     }
@@ -123,44 +167,35 @@
   }
 }
 
-@keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* 모바일에서는 데스크탑 메뉴 숨기기 */
   }
-  20% {
-    transform: rotate(45deg);
-  }
-  40% {
-    transform: rotate(90deg);
-  }
-  60% {
-    transform: rotate(135deg);
-  }
-  80% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
 
-@keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
+  .menu-toggle {
+    display: flex; /* 모바일에서 햄버거 버튼 보이기 */
   }
-  20% {
-    transform: rotate(-45deg);
-  }
-  40% {
-    transform: rotate(-90deg);
-  }
-  60% {
-    transform: rotate(-135deg);
-  }
-  80% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(-360deg); /* 360도 회전 */
+
+  .mobile-nav {
+    display: block; /* 메뉴 열렸을 때 보이기 */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+      }
+    }
   }
 }

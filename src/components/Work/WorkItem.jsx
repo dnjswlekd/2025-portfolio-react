@@ -119,11 +119,11 @@ const SectionWork = ({ data, sectionRef }) => {
                 </div>
               )}
             </div>
-            <ul className="anchor">
+            {/* <ul className="anchor">
               {skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
-            </ul>
+            </ul> */}
           </li>
         </ul>
       </div>

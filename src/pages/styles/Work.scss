@@ -9,15 +9,41 @@
     max-width: 1080px;
     margin: 0 auto;
 
-    .title {
-      @include mixin.home-title;
-      text-align: center;
-    }
+    .intro {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
 
-    .badge {
-      @include mixin.badge;
-      top: -32px;
-      left: 26%;
+      .intro-text {
+        max-width: 780px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+
+        h1 {
+          font-family: 'Satoshi', sans-serif;
+          font-size: 62px;
+          text-transform: capitalize;
+          letter-spacing: -2px;
+
+          span {
+            display: block;
+          }
+        }
+
+        .desc {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          p {
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: -0.4px;
+          }
+        }
+      }
     }
 
     .intro-view {
@@ -30,21 +56,41 @@
     }
 
     .work-section {
+      color: var(--tertiary-text-color);
+      background-color: var(--tertiary-bg-color);
+      border-radius: 16px;
+      border: 1px dotted rgba(0, 0, 0, 0.16);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 30px 0;
+
       .work-section-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
-      .project-section {
-        padding-block: 3rem 5rem;
+      .project-section-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .project-section {
+      margin-top: 2rem;
+      padding: 0 2rem;
+      color: var(--tertiary-text-color);
+      background-color: var(--tertiary-bg-color);
+      border-radius: 16px;
+      border: 1px dotted rgba(0, 0, 0, 0.16);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      padding: 30px 0;
 
-        .project-layout {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-
-          .content-box {
-            flex-direction: column;
-          }
-        }
+      .project-section-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
