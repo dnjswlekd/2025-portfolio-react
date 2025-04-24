@@ -249,19 +249,4 @@
       }
     }
   }
-
-  /* 👇 추가된 footer .inner .left 모바일 스타일 */
-  .footer {
-    .inner {
-      .left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        h1 {
-          padding: 15px 0 !important;
-        }
-      }
-    }
-  }
 }

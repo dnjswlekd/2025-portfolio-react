@@ -11,22 +11,36 @@
 
 .modal-content {
   position: relative;
-  max-width: 960px;
+  max-width: 700px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 97vh;
   overflow-y: auto;
   background: #fff;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 0.7rem;
+  padding: 1.4rem;
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease-in-out;
+  font-size: 1rem;
+
+  @media (max-width: 1024px) {
+    max-width: 470px;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 360px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+  }
 }
 
 .modal-close {
   position: absolute;
-  top: 1.3rem;
-  right: 1.3rem;
-  font-size: 2rem;
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   background: none;
   border: none;
@@ -36,11 +50,20 @@
   &:hover {
     color: #000;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    top: 0.5rem;
+    right: 0.6rem;
+  }
 }
 
-// work-content
 .modal-work-content {
-  margin-block: 2rem 1rem;
+  margin-block: 0.2rem;
+
+  @media (max-width: 768px) {
+    margin-block: 1rem 0.8rem;
+  }
 
   .modal-img {
     position: relative;
@@ -48,9 +71,14 @@
     overflow: hidden;
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 0.7rem;
     cursor: pointer;
-    box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
+    box-shadow: 3px 0 7px rgba(108, 108, 108, 0.1);
+
+    @media (max-width: 768px) {
+      border-radius: 1rem;
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -59,7 +87,7 @@
       transition: transform 0.3s ease-in-out;
 
       &:hover {
-        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0px 0px 1.25rem rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -67,8 +95,8 @@
       position: absolute;
       content: attr(data-contribution);
       background: #ddd;
-      padding: 8px 11px;
-      border-radius: 0 0 0 8px;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0 0 0 0.5rem;
       color: #000;
       top: 0;
       right: 0;
@@ -85,6 +113,13 @@
       background: #ffa500;
       color: #fff;
     }
+
+    @media (max-width: 768px) {
+      &::after {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+      }
+    }
   }
 
   .modal-desc {
@@ -92,19 +127,40 @@
     flex-flow: column;
     gap: 1.3rem;
     margin-left: 0.5rem;
+    color: #202124;
+
+    @media (max-width: 768px) {
+      margin-left: 0rem;
+    }
 
     .intro {
-      margin-block: 1.9rem 0;
+      margin-block: 1rem 0;
       display: flex;
       align-items: baseline;
       flex-direction: row-reverse;
       justify-content: flex-end;
-      gap: 10px;
+      gap: 0.625rem;
 
       h3 {
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-block: 0.7rem;
+      }
+
+      @media (max-width: 1024px) {
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-block: 1.2rem 0;
+        flex-direction: column;
+        gap: 0rem;
+
+        h3 {
+          font-size: 1.1rem;
+        }
       }
     }
 
@@ -112,30 +168,45 @@
       font-size: 1.1rem;
       font-weight: 500;
       opacity: 0.7;
+
+      @media (max-width: 1024px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
     }
 
     .explain {
       line-height: 1.5;
 
       h4 {
-        border-bottom: 1px solid var(--secondary-border-color);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         margin-bottom: 0.5rem;
         padding-bottom: 0.7rem;
+        font-size: 1.1rem;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: #6b6b6b;
+        }
       }
 
       span {
         position: relative;
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 1.25rem;
         text-transform: capitalize;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.025rem;
 
         &:not(:last-child)::after {
           content: '';
           position: absolute;
           width: 3px;
           height: 3px;
-          background-color: var(--tertiary-text-color);
+          background-color: #2b2b2b;
           border-radius: 50%;
           top: 50%;
           left: calc(100% + 7px);
@@ -163,7 +234,6 @@
   }
 }
 
-// 간단한 페이드 인 애니메이션
 @keyframes fadeIn {
   0% {
     opacity: 0;

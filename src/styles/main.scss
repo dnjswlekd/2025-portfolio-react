@@ -6,9 +6,14 @@
 
 /* 기본 색상 (라이트모드) */
 :root {
-  --primary-bg-color: #fcfcfc;
-  --primary-text-color: #333;
+  --primary-text-color: #202124;
+  --primary-bg-color: #f8f9fa;
+
+  --badge-primary-color: #b8ceff;
+  --badge-secondary-color: #78c7f9;
+
   --secondary-bg-color: #f4f4f4;
+  --button-text-color: #425a73;
 
   --header-bg-color: rgb(20, 20, 20);
   --header-bg-active-color: #fff;
@@ -28,9 +33,14 @@
 
 /* 다크모드 색상 */
 .dark {
-  --primary-bg-color: #333;
-  --primary-text-color: #fff;
+  --primary-text-color: #e8eaed;
+  --primary-bg-color: #202124;
+
+  --badge-primary-color: #4b659f;
+  --badge-secondary-color: #4f84a5;
+
   --secondary-bg-color: #444;
+  --button-text-color: #a1bedb;
 
   --header-bg-color: #fff;
   --header-bg-active-color: rgb(20, 20, 20);

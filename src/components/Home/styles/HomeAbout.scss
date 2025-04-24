@@ -141,6 +141,10 @@
           margin-top: 2px;
           padding: 3px;
           color: #fff;
+
+          path {
+            color: var(--primary-bg-color);
+          }
         }
 
         &:hover {

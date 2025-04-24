@@ -2,13 +2,30 @@ import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/Modal.scss';
 
+// Font Awesome 아이콘 import
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 const Modal = ({ data, onClose }) => {
   useEffect(() => {
+    // 스크롤 방지
     document.body.style.overflow = 'hidden';
+
+    // ESC 키 핸들러
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    // cleanup
     return () => {
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [onClose]);
 
   const { title, duration, skills, tasks, features, imageSrc, contribution } =
     data;
@@ -16,8 +33,12 @@ const Modal = ({ data, onClose }) => {
   return ReactDOM.createPortal(
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          &times;
+        <button
+          className="modal-close"
+          onClick={onClose}
+          aria-label="Close Modal"
+        >
+          <FontAwesomeIcon icon={faXmark} />
         </button>
 
         <div className="modal-work-content">

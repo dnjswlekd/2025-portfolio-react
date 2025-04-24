@@ -21,7 +21,13 @@
   width: 80px;
   height: 80px;
   border-radius: 5px;
-  background: linear-gradient(137deg, #ffffff, #b8ceff, #78c7f9, #ffffff);
+  background: linear-gradient(
+    137deg,
+    #ffffff,
+    var(--badge-primary-color),
+    var(--badge-secondary-color),
+    #ffffff
+  );
   background-size: 240% 240%;
   animation: gradient-animation 4s ease infinite;
 }
