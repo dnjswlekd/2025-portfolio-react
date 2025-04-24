@@ -100,6 +100,12 @@ body {
   height: fit-content;
 }
 
+@media (max-width: 1024px) {
+  .section {
+    opacity: 1 !important;
+  }
+}
+
 /* 스크롤바 전체 크기 */
 ::-webkit-scrollbar {
   width: 12px;

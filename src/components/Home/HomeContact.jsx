@@ -59,9 +59,12 @@ function HomeContact() {
                 <br />
                 <strong>웹 퍼블리셔, 박원지</strong>가 되겠습니다."
               </p>
-              <p>연락처 : wj8014@gmail.com, 010-5237-1274</p>
+              <p>
+                연락처 : <span> wj8014@gmail.com,</span>
+                <span>010-5237-1274</span>
+              </p>
 
-              <div className="link clearfix">
+              <div className="link">
                 <a
                   href="https://dnjswlekd.notion.site/c2464a78e9e14ed294996934e8b30878?pvs=4"
                   className="notion"

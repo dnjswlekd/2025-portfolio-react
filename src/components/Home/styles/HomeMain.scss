@@ -5,8 +5,15 @@
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 1024px) {
+    padding: 100px 20px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 80 20px 0;
+  }
+
   .inner {
-    max-height: 850px;
     color: var(--tertiary-text-color);
     background-color: var(--tertiary-bg-color);
     border-radius: 16px;
@@ -17,10 +24,23 @@
     align-items: center;
     gap: 3rem;
 
+    @media (max-width: 1024px) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 35px 0;
+    }
+
     .intro {
       display: flex;
       justify-content: center;
       gap: 3rem;
+      padding: 0 2rem;
+
+      @media (max-width: 1024px) {
+        padding: 0 1rem;
+      }
 
       .intro-text {
         max-width: 780px;
@@ -31,12 +51,20 @@
 
         h1 {
           font-family: 'Satoshi', sans-serif;
-          font-size: 62px;
+          font-size: 3.8rem;
           text-transform: uppercase;
           letter-spacing: -2px;
 
           span {
             display: block;
+          }
+
+          @media (max-width: 1024px) {
+            font-size: 3rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 2.5rem;
           }
         }
 
@@ -46,9 +74,17 @@
           gap: 1.5rem;
 
           p {
-            font-size: 18px;
+            font-size: 1.3rem;
             line-height: 1.6;
             letter-spacing: -0.4px;
+
+            @media (max-width: 1024px) {
+              font-size: 1rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 0.9rem;
+            }
           }
         }
       }
@@ -57,6 +93,10 @@
     .scroll-down-btn {
       display: inline-block;
       animation: bounce 2s ease-in-out infinite;
+
+      @media (max-width: 768px) {
+        display: none !important;
+      }
     }
 
     @keyframes bounce {
@@ -85,13 +125,21 @@
         display: flex;
         gap: 10px;
         flex-wrap: nowrap;
-        width: max-content; // 가로 스크롤을 위해 최대 길이 유지
+        width: max-content;
         animation: img-loop 15s linear infinite;
 
         .item {
           width: 360px;
           height: auto;
           border-radius: 15px;
+
+          @media (max-width: 1024px) {
+            width: 300px;
+          }
+
+          @media (max-width: 768px) {
+            width: 260px;
+          }
 
           img {
             width: 100%;

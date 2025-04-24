@@ -11,13 +11,31 @@
 
   h3 {
     margin-block: 2rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: left;
+
+    @media (max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
 
   p {
     line-height: 1.7;
     letter-spacing: -0.4px;
     text-align: left;
+    font-size: 1rem;
+
+    @media (max-width: 1024px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -1,6 +1,14 @@
 .work-content {
   margin-block: 2rem 1rem;
 
+  @media (max-width: 1024px) {
+    margin-block: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-block: 0 1rem;
+  }
+
   .preview {
     position: relative;
     display: inline-block;
@@ -34,6 +42,15 @@
       right: 0;
       font-size: 0.8rem;
       font-weight: bold;
+
+      @media (max-width: 1024px) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.6rem;
+        padding: 7px 9px;
+      }
     }
 
     &[data-contribution='기여도 100%']::after {

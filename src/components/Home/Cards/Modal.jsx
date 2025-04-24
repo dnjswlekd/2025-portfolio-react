@@ -20,7 +20,7 @@ const Modal = ({ data, onClose }) => {
           &times;
         </button>
 
-        <div className="work-content">
+        <div className="modal-work-content">
           <div
             className="modal-img"
             data-contribution={`기여도 ${contribution}`}
