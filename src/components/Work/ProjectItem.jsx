@@ -12,9 +12,9 @@ const SectionWork = ({ data, sectionRef }) => {
     if (!sectionRef.current) return; // DOM이 없으면 종료
 
     const ctx = gsap.context(() => {
-      gsap.from(`.${sectionClass} .title`, {
+      gsap.from(`.${sectionClass} h3`, {
         scrollTrigger: {
-          trigger: `.${sectionClass} .title`,
+          trigger: `.${sectionClass} h3`,
           start: 'top 80%',
           toggleActions: 'play none none none',
         },
@@ -26,7 +26,7 @@ const SectionWork = ({ data, sectionRef }) => {
 
       gsap.from(`.${sectionClass} .text-box`, {
         scrollTrigger: {
-          trigger: `.${sectionClass} .text-box`,
+          trigger: `.${sectionClass} .img-wrap `,
           start: 'top 80%',
           toggleActions: 'play none none none',
         },
@@ -37,18 +37,18 @@ const SectionWork = ({ data, sectionRef }) => {
         ease: 'power2.out',
       });
 
-      gsap.from(`.${sectionClass} .anchor li`, {
-        scrollTrigger: {
-          trigger: `.${sectionClass} .anchor`,
-          start: 'top 85%',
-        },
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'power1.out',
-        delay: 0.5,
-      });
+      // gsap.from(`.${sectionClass} .anchor li`, {
+      //   scrollTrigger: {
+      //     trigger: `.${sectionClass} .anchor`,
+      //     start: 'top 85%',
+      //   },
+      //   opacity: 0,
+      //   y: 20,
+      //   duration: 0.6,
+      //   stagger: 0.2,
+      //   ease: 'power1.out',
+      //   delay: 0.5,
+      // });
 
       gsap.from(`.${sectionClass} .img-wrap .preview`, {
         scrollTrigger: {

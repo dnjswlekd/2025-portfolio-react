@@ -4,6 +4,9 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+
 gsap.registerPlugin(ScrollTrigger);
 
 import WorkItem from '@/components/Work/WorkItem';
@@ -36,7 +39,7 @@ const sectionDataList = [
   },
   {
     type: 'work',
-    sectionClass: 'section02',
+    sectionClass: 'section01',
     title: '병원전용 메신저 시스템',
     link: 'https://www.notion.so/UI-UX-1a2ecdd53fa481a2a33bc677d902dff9?pvs=4',
     imageSrc: 'src/assets/images/메신저.png',
@@ -47,7 +50,7 @@ const sectionDataList = [
   },
   {
     type: 'work',
-    sectionClass: 'section02',
+    sectionClass: 'section01',
     imageSrc: 'src/assets/images/주차관제.png',
     title: '병원전용 주차관제 시스템 (모바일)',
     duration: '2023.10 ~ 2024.02',
@@ -67,7 +70,7 @@ const sectionDataList = [
   },
   {
     type: 'work',
-    sectionClass: 'section02',
+    sectionClass: 'section01',
     imageSrc: 'src/assets/images/대명스페셜라이프.png',
     title: 'E-브로슈어 쇼핑몰 메인, 상세페이지',
     duration: '2024.11',
@@ -187,11 +190,22 @@ function Work() {
               <h1>Work</h1>
               <div className="desc">
                 <p>
-                  퍼블리셔 경력 1년 7개월간 작업한 저의 결과물을 보실 수
-                  있습니다.
+                  병원 전용 그룹웨어 프로젝트에서 메일, 캘린더, 전자보고,
+                  커뮤니티 등 9개 시스템의 <br /> UI 설계와 퍼블리싱을 담당하며,
+                  병원 관계자와 개발자 간의 커뮤니케이션을 통해 사용성과
+                  기능성을 모두 고려한 화면을 기획하고 구현했습니다. Vue.js
+                  기반으로 개발된 프로젝트는 설계부터 개발 완료, 유지보수까지 전
+                  과정을 맡아 진행했으며, 이후 메신저, 주차관제 웹 시스템,
+                  e-브로셔 페이지 작업까지 이어가며 각 프로젝트의 목적과 특성에
+                  맞는 퍼블리싱과 UI 설계를 수행했습니다. <br /> 실무 전반을
+                  아우르며 사용자 중심의 인터페이스와 체계적인 마크업 구조를
+                  구축해왔습니다.
                 </p>
-                <span>
-                  *이미지를 클릭하면 해당 프로젝트의 상세페이지로 이동합니다.
+                <span className="tooltip-wrapper">
+                  <FontAwesomeIcon icon={faExclamationCircle} />
+                  <span className="tooltip">
+                    이미지를 클릭하면 상세페이지로 이동합니다.
+                  </span>
                 </span>
               </div>
             </div>
@@ -212,11 +226,15 @@ function Work() {
               <h1>Project</h1>
               <div className="desc">
                 <p>
-                  퍼블리셔 경력 1년 7개월간 작업한 저의 결과물을 보실 수
-                  있습니다.
+                  여러 프로젝트를 통해 피그마 디자인 시스템을 직접 구축하거나,
+                  구축한 시스템을 기반으로 UI를 구성하고, 마크업을 체계적으로
+                  구성해 웹표준에 맞춰 퍼블리싱까지 전체 과정을 경험했습니다.
                 </p>
-                <span>
-                  *이미지를 클릭하면 해당 프로젝트의 상세페이지로 이동합니다.
+                <span className="tooltip-wrapper">
+                  <FontAwesomeIcon icon={faExclamationCircle} />
+                  <span className="tooltip">
+                    이미지를 클릭하면 해당 프로젝트로 이동합니다.
+                  </span>
                 </span>
               </div>
             </div>

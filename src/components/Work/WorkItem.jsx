@@ -22,10 +22,10 @@ const SectionWork = ({ data, sectionRef }) => {
     if (!sectionRef.current) return; // DOM이 없으면 종료
 
     const ctx = gsap.context(() => {
-      gsap.from(`.${sectionClass} .title`, {
+      gsap.from(`.${sectionClass} .work-title`, {
         scrollTrigger: {
-          trigger: `.${sectionClass} .title`,
-          start: 'top 80%',
+          trigger: `.${sectionClass} .work-title`,
+          start: 'top 100%',
           toggleActions: 'play none none none',
         },
         opacity: 0,
@@ -34,10 +34,10 @@ const SectionWork = ({ data, sectionRef }) => {
         ease: 'power2.out',
       });
 
-      gsap.from(`.${sectionClass} .text-box`, {
+      gsap.from(`.${sectionClass} .desc-wrap .text-box`, {
         scrollTrigger: {
           trigger: `.${sectionClass} .text-box`,
-          start: 'top 80%',
+          start: 'top 100%',
           toggleActions: 'play none none none',
         },
         opacity: 0,
@@ -47,18 +47,18 @@ const SectionWork = ({ data, sectionRef }) => {
         ease: 'power2.out',
       });
 
-      gsap.from(`.${sectionClass} .anchor li`, {
-        scrollTrigger: {
-          trigger: `.${sectionClass} .anchor`,
-          start: 'top 85%',
-        },
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'power1.out',
-        delay: 0.5,
-      });
+      // gsap.from(`.${sectionClass} .anchor li`, {
+      //   scrollTrigger: {
+      //     trigger: `.${sectionClass} .anchor`,
+      //     start: 'top 85%',
+      //   },
+      //   opacity: 0,
+      //   y: 20,
+      //   duration: 0.6,
+      //   stagger: 0.2,
+      //   ease: 'power1.out',
+      //   delay: 0.5,
+      // });
 
       gsap.from(`.${sectionClass} .img-wrap .preview`, {
         scrollTrigger: {
