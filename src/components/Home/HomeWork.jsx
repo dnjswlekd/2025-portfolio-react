@@ -30,7 +30,7 @@ const workData = [
     contribution: '100%',
   },
   {
-    link: 'https://www.notion.so/UI-UX-1a2ecdd53fa481a2a33bc677d902dff9?pvs=4',
+    link: 'https://www.notion.so/1caecdd53fa4808691e6ff3c2ae8dd8a?pvs=4',
     imageSrc: 'src/assets/images/메신저.png',
     title: '병원전용 메신저 시스템',
     duration: '2023.07 ~ 2025.01',
@@ -39,6 +39,7 @@ const workData = [
     contribution: '40%',
   },
   {
+    link: 'https://www.notion.so/UI-UX-1a2ecdd53fa480018b48d0e1dad6ff4e?pvs=4',
     imageSrc: 'src/assets/images/주차관제.png',
     title: '병원전용 주차관제 시스템 (모바일)',
     duration: '2023.10 ~ 2024.02',
@@ -57,6 +58,7 @@ const workData = [
     contribution: '100%',
   },
   {
+    link: 'https://www.notion.so/e-1a2ecdd53fa480ad9d30d721d66c9aee?pvs=4',
     imageSrc: 'src/assets/images/대명스페셜라이프.png',
     title: 'E-브로슈어 쇼핑몰 메인, 상세페이지',
     duration: '2024.11',

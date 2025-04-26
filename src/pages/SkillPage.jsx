@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SkillItem from '@/components/SkillItem';
+import SkillItem from '@/components/Skill/SkillItem';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
