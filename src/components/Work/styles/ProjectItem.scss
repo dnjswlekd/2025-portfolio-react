@@ -32,8 +32,12 @@
         overflow: hidden;
         width: 100%;
         height: auto;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
+
+        @media (max-width: 768px) {
+          border-radius: 0.2rem;
+        }
 
         .img {
           img {
@@ -42,19 +46,6 @@
             background-size: contain;
             transition: transform 0.3s ease-in-out;
           }
-        }
-
-        &::after {
-          position: absolute;
-          content: attr(data-contribution);
-          background: #ddd;
-          padding: 8px 11px;
-          border-radius: 0 0 0 8px;
-          color: #000;
-          top: 0;
-          right: 0;
-          font-size: 0.8rem;
-          font-weight: bold;
         }
       }
     }
@@ -93,6 +84,7 @@
             @media (max-width: 768px) {
               font-size: 1rem;
               height: auto;
+              margin-block: 0.7rem 0.9rem;
             }
           }
 
@@ -103,6 +95,7 @@
             @media (max-width: 768px) {
               line-height: 1.4;
               font-size: 0.8rem;
+              margin-bottom: 0.7rem;
             }
           }
         }
@@ -145,6 +138,7 @@
           @media (max-width: 768px) {
             width: 100%;
             font-size: 0.6rem;
+            box-shadow: none;
           }
         }
 

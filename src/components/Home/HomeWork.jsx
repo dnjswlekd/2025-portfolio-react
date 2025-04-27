@@ -157,7 +157,11 @@ function HomeWork() {
       <div className="inner">
         <div className="title-wrap">
           <div>
-            <h1 className="title">Work & Project</h1>
+            {/* <h1 className="title">Work & Project</h1> */}
+            <h1 className="title">
+              <span>Work & </span>
+              <span>Project</span>
+            </h1>
             <div className="badge"></div>
           </div>
           <Link to="/work">

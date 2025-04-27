@@ -34,8 +34,12 @@
         overflow: hidden;
         width: 100%;
         height: auto;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
+
+        @media (max-width: 768px) {
+          border-radius: 0.2rem;
+        }
 
         img {
           width: 100%;
@@ -60,6 +64,15 @@
           right: 0;
           font-size: 0.8rem;
           font-weight: bold;
+
+          @media (max-width: 1024px) {
+          }
+
+          @media (max-width: 768px) {
+            border-radius: 0 0 0 4px;
+            padding: 0.4rem 0.5rem;
+            font-size: 0.6rem;
+          }
         }
 
         &[data-contribution='기여도 100%']::after {
@@ -92,6 +105,11 @@
           span {
             font-weight: 400;
             color: #9f9f9f;
+            font-size: 1.2rem;
+
+            @media (max-width: 768px) {
+              font-size: 0.8rem;
+            }
           }
 
           h3 {
@@ -100,7 +118,7 @@
             margin-block: 0.7rem;
 
             @media (max-width: 768px) {
-              font-size: 1.2rem;
+              font-size: 1.1rem;
             }
           }
         }
