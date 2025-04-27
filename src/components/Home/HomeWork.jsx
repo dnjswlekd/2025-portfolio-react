@@ -9,7 +9,7 @@ import Modal from '@/components/Home/Cards/Modal';
 import GroupwareImage from '@/assets/images/groupware.png';
 import MessengerImage from '@/assets/images/messenger.png';
 import ParkingImage from '@/assets/images/parking.png';
-import BrochureImage from '@/assets/images/e-brochure.png';
+import BrochureImage from '@/assets/images/ebrochure.png';
 import InsightMainImage from '@/assets/images/homeWork-insight-main.png';
 import InterparkImage from '@/assets/images/homeWork-interpark.png';
 import DesignSystemImage from '@/assets/images/work-design-system.png';

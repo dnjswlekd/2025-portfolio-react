@@ -18,7 +18,7 @@ import './styles/Work.scss';
 import GroupwareImg from '@/assets/images/groupware.png';
 import MessengerImg from '@/assets/images/messenger.png';
 import ParkingImg from '@/assets/images/parking.png';
-import BrochureImg from '@/assets/images/e-brochure.png';
+import BrochureImg from '@/assets/images/ebrochure.png';
 
 import InsightImg from '@/assets/images/homeWork-insight-main.png';
 import InterparkImg from '@/assets/images/homeWork-interpark.png';
