@@ -6,10 +6,10 @@ import HomeWorkItem from '@/components/Home/Cards/HomeWorkItem';
 import HomeProjectItem from '@/components/Home/Cards/HomeProjectItem';
 import Modal from '@/components/Home/Cards/Modal';
 
-import GroupwareImage from '@/assets/images/그룹웨어.png';
-import MessengerImage from '@/assets/images/메신저.png';
-import ParkingImage from '@/assets/images/주차관제.png';
-import BrochureImage from '@/assets/images/대명스페셜라이프.png';
+import GroupwareImage from '@/assets/images/groupware.png';
+import MessengerImage from '@/assets/images/messenger.png';
+import ParkingImage from '@/assets/images/parking.png';
+import BrochureImage from '@/assets/images/e-brochure.png';
 import InsightMainImage from '@/assets/images/homeWork-insight-main.png';
 import InterparkImage from '@/assets/images/homeWork-interpark.png';
 import DesignSystemImage from '@/assets/images/work-design-system.png';

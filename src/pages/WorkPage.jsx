@@ -15,10 +15,10 @@ import ProjectItem from '@/components/Work/ProjectItem';
 import './styles/Work.scss';
 
 // 이미지 import
-import GroupwareImg from '@/assets/images/그룹웨어.png';
-import MessengerImg from '@/assets/images/메신저.png';
-import ParkingImg from '@/assets/images/주차관제.png';
-import BrochureImg from '@/assets/images/대명스페셜라이프.png';
+import GroupwareImg from '@/assets/images/groupware.png';
+import MessengerImg from '@/assets/images/messenger.png';
+import ParkingImg from '@/assets/images/parking.png';
+import BrochureImg from '@/assets/images/e-brochure.png';
 
 import InsightImg from '@/assets/images/homeWork-insight-main.png';
 import InterparkImg from '@/assets/images/homeWork-interpark.png';
