@@ -87,6 +87,7 @@ const sectionDataList = [
     imageSrc: 'src/assets/images/homeWork-insight-main.png',
     title: '강의 플랫폼 UI/UX 디자인 및 퍼블리싱',
     desc: '피그마로 UI를 설계하고 컴포넌트 기반으로 구조화한 후, Vue.js와 SCSS로 반응형 퍼블리싱한 강의 사이트입니다.',
+    link: 'https://www.figma.com/design/i7LessEiDIKX96l8QxymFa/Beyond-Insight?node-id=87-1082&t=4mnakiN4m58PrcJa-1',
   },
   {
     type: 'project',
