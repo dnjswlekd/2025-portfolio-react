@@ -1,6 +1,9 @@
 import React from 'react';
-import '@/layout/styles/footer.scss';
 import { NavLink } from 'react-router-dom';
+import '@/layout/styles/footer.scss';
+
+import LogoWhite from '@/assets/images/logo-w.png';
+import LogoBlack from '@/assets/images/logo-b.png';
 
 function Footer({ theme }) {
   const navLinks = [
@@ -10,10 +13,7 @@ function Footer({ theme }) {
     { to: '/work', label: 'Work' },
   ];
 
-  const logoSrc =
-    theme === 'dark'
-      ? 'src/assets/images/logo-w.png'
-      : 'src/assets/images/logo-b.png';
+  const logoSrc = theme === 'dark' ? LogoWhite : LogoBlack;
 
   return (
     <footer className="footer">
