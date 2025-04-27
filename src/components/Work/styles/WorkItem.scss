@@ -96,19 +96,27 @@
 
           h3 {
             font-weight: 600;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-block: 0.7rem;
+
+            @media (max-width: 768px) {
+              font-size: 1.2rem;
+            }
           }
         }
 
         h5 {
-          font-size: 1.1rem;
+          font-size: 1rem;
           font-weight: 500;
           opacity: 0.7;
         }
 
         .explain {
           line-height: 1.5;
+
+          @media (max-width: 768px) {
+            font-size: 0.8rem;
+          }
 
           h4 {
             border-bottom: 1px solid var(--secondary-border-color);

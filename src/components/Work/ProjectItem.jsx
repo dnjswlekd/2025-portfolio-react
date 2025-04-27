@@ -1,12 +1,20 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import figma from '@/assets/images/figma-icon.png';
+
 import './styles/ProjectItem.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionWork = ({ data, sectionRef }) => {
-  const { sectionClass, link, imageSrc, title, desc } = data;
+  const { sectionClass, linkPage, link, imageSrc, title, desc } = data;
+  const handleNotionClick = (e) => {
+    e.stopPropagation();
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
 
   useEffect(() => {
     if (!sectionRef.current) return; // DOM이 없으면 종료
@@ -14,7 +22,7 @@ const SectionWork = ({ data, sectionRef }) => {
     const ctx = gsap.context(() => {
       gsap.from(`.${sectionClass} h3`, {
         scrollTrigger: {
-          trigger: `.${sectionClass} h3`,
+          trigger: `.${sectionClass} .content-box`,
           start: 'top 80%',
           toggleActions: 'play none none none',
         },
@@ -86,6 +94,21 @@ const SectionWork = ({ data, sectionRef }) => {
               <div className="intro">
                 <h3>{title}</h3>
                 <p>{desc}</p>
+
+                <div className="anchor-btn">
+                  {' '}
+                  {linkPage && (
+                    <button onClick={handleNotionClick}>
+                      🔗 사이트 바로가기
+                    </button>
+                  )}
+                  {link && (
+                    <button onClick={handleNotionClick}>
+                      <img src={figma} alt="figma-icon" />
+                      Figma 바로가기
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </li>
