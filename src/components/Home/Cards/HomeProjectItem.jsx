@@ -20,12 +20,12 @@ function ProjectContent({ linkPage, link, imageSrc, title, desc }) {
         <div className="anchor-btn">
           {' '}
           {linkPage && (
-            <button onClick={handleNotionClick}>🔗 사이트 바로가기</button>
+            <button onClick={handleNotionClick}>🔗 사이트로 이동</button>
           )}
           {link && (
             <button onClick={handleNotionClick}>
               <img src={figma} alt="figma-icon" />
-              Figma 바로가기
+              Figma로 이동
             </button>
           )}
         </div>
