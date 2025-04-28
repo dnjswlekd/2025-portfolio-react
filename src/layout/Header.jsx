@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import ThemeToggleButton from '@/components/Buttons/ThemeToggleButton';
+
 import '@/layout/styles/header.scss';
+
+import LogoWhite from '@/assets/images/logo-w.png';
+import LogoBlack from '@/assets/images/logo-b.png';
 
 function Header({ theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false); // 메뉴 상태 관리
@@ -13,10 +17,7 @@ function Header({ theme, toggleTheme }) {
     { to: '/work', label: 'Work & Project' },
   ];
 
-  const logoSrc =
-    theme === 'dark'
-      ? 'src/assets/images/logo-b.png'
-      : 'src/assets/images/logo-w.png';
+  const logoSrc = theme === 'dark' ? LogoWhite : LogoBlack;
 
   const toggleMenu = () => setMenuOpen((prevState) => !prevState);
 
