@@ -17,7 +17,7 @@ function Header({ theme, toggleTheme }) {
     { to: '/work', label: 'Work & Project' },
   ];
 
-  const logoSrc = theme === 'dark' ? LogoWhite : LogoBlack;
+  const logoSrc = theme === 'light' ? LogoWhite : LogoBlack;
 
   const toggleMenu = () => setMenuOpen((prevState) => !prevState);
 
