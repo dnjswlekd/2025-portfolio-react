@@ -15,12 +15,10 @@ import vue from '@/assets/images/vue-icon.png';
 import react from '@/assets/images/react-icon.png';
 import sass from '@/assets/images/sass-icon.png';
 import tailwind from '@/assets/images/tailwind-icon.png';
-
 import figma from '@/assets/images/figma-icon.png';
 import photoshop from '@/assets/images/photoshop-icon.png';
 import illustrator from '@/assets/images/illustrator-icon.png';
 import indesign from '@/assets/images/indesign-icon.png';
-
 import notion from '@/assets/images/notion-icon.png';
 import git from '@/assets/images/git-icon.png';
 import gitlab from '@/assets/images/gitlab-icon.png';
@@ -29,6 +27,27 @@ import sourcetree from '@/assets/images/sourcetree-icon.png';
 
 // gsap 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
+
+// 동적 데이터를 상수로 분리
+const skills = [
+  { imgSrc: html, title: '0', category: 'HTML' },
+  { imgSrc: css, title: '1', category: 'CSS' },
+  { imgSrc: javascript, title: '2', category: 'JavaScript' },
+  { imgSrc: jquery, title: '3', category: 'JQuery' },
+  { imgSrc: vue, title: '4', category: 'Vue' },
+  { imgSrc: react, title: '5', category: 'React' },
+  { imgSrc: sass, title: '6', category: 'SCSS(SASS)' },
+  { imgSrc: tailwind, title: '7', category: 'Tailwind CSS' },
+  { imgSrc: figma, title: '8', category: 'Figma' },
+  { imgSrc: photoshop, title: '9', category: 'Photoshop' },
+  { imgSrc: illustrator, title: '10', category: 'Illustrator' },
+  { imgSrc: indesign, title: '11', category: 'Indesign' },
+  { imgSrc: notion, title: '12', category: 'Notion' },
+  { imgSrc: git, title: '13', category: 'Git' },
+  { imgSrc: gitlab, title: '14', category: 'Gitlab' },
+  { imgSrc: github, title: '15', category: 'Github' },
+  { imgSrc: sourcetree, title: '16', category: 'Sourcetree' },
+];
 
 function HomeWork() {
   useEffect(() => {
@@ -74,9 +93,8 @@ function HomeWork() {
           color: '#fff',
           paddingBlock: '30vh',
           ease: 'none',
-          duration: 5,
+          duration: 3, // 애니메이션 속도 동적 조정
         },
-
         0
       )
       .to(
@@ -86,7 +104,7 @@ function HomeWork() {
           left: 0,
           top: 0,
           ease: 'none',
-          duration: 5,
+          duration: 3, // 애니메이션 속도 동적 조정
         },
         0
       )
@@ -97,7 +115,7 @@ function HomeWork() {
           margin: '100vh auto 0 ',
           position: 'relative',
           zIndex: '10',
-          duration: 1,
+          duration: 2, // 애니메이션 속도 동적 조정
         },
         0
       );
@@ -126,7 +144,6 @@ function HomeWork() {
   }, []);
 
   return (
-    // <div className="section home-work animate">
     <div>
       <div className="work-inner">
         <div className="title">
@@ -134,93 +151,7 @@ function HomeWork() {
           <p>skill</p>
         </div>
         <ul className="work-list">
-          {[
-            {
-              imgSrc: html,
-              title: '0',
-              category: 'HTML',
-            },
-            {
-              imgSrc: css,
-              title: '1',
-              category: 'CSS',
-            },
-            {
-              imgSrc: javascript,
-              title: '2',
-              category: 'JavaScript',
-            },
-            {
-              imgSrc: jquery,
-              title: '3',
-              category: 'JQuery',
-            },
-            {
-              imgSrc: vue,
-              title: '4',
-              category: 'Vue',
-            },
-            {
-              imgSrc: react,
-              title: '5',
-              category: 'React',
-            },
-            {
-              imgSrc: sass,
-              title: '6',
-              category: 'SCSS(SASS)',
-            },
-            {
-              imgSrc: tailwind,
-              title: '7',
-              category: 'Tailwind CSS',
-            },
-            {
-              imgSrc: figma,
-              title: '8',
-              category: 'Figma',
-            },
-            {
-              imgSrc: photoshop,
-              title: '9',
-              category: 'Photoshop',
-            },
-            {
-              imgSrc: illustrator,
-              title: '10',
-              category: 'Illustrator',
-            },
-            {
-              imgSrc: indesign,
-              title: '11',
-              category: 'Indesign',
-            },
-            {
-              imgSrc: notion,
-              title: '12',
-              category: 'Notion',
-            },
-            {
-              imgSrc: git,
-              title: '13',
-              category: 'Git',
-            },
-            {
-              imgSrc: gitlab,
-              title: '14',
-              category: 'Gitlab',
-            },
-            {
-              imgSrc: github,
-              title: '15',
-              category: 'Github',
-            },
-            {
-              imgSrc: sourcetree,
-              title: '16',
-              category: 'Sourcetree',
-            },
-          ].map((item, index) => (
+          {skills.map((item, index) => (
             <SkillItem
               key={index}
               imgSrc={item.imgSrc}

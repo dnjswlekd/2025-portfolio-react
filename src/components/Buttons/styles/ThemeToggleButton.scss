@@ -2,21 +2,21 @@
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
 
   &:hover {
     opacity: 0.8;
   }
 
   .theme-toggle-icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     transition: transform 0.3s ease-in-out;
 
     img {
@@ -27,7 +27,6 @@
   }
 }
 
-/* 추가: 회전 효과 */
 .theme-toggle-icon.rotating.rotate-right {
   transform: rotate(360deg);
 }

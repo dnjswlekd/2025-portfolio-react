@@ -47,19 +47,6 @@ const SectionWork = ({ data, sectionRef }) => {
         ease: 'power2.out',
       });
 
-      // gsap.from(`.${sectionClass} .anchor li`, {
-      //   scrollTrigger: {
-      //     trigger: `.${sectionClass} .anchor`,
-      //     start: 'top 85%',
-      //   },
-      //   opacity: 0,
-      //   y: 20,
-      //   duration: 0.6,
-      //   stagger: 0.2,
-      //   ease: 'power1.out',
-      //   delay: 0.5,
-      // });
-
       gsap.from(`.${sectionClass} .img-wrap .preview`, {
         scrollTrigger: {
           trigger: `.${sectionClass} .img-wrap`,
@@ -119,11 +106,6 @@ const SectionWork = ({ data, sectionRef }) => {
                 </div>
               )}
             </div>
-            {/* <ul className="anchor">
-              {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul> */}
           </li>
         </ul>
       </div>

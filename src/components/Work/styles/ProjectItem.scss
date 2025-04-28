@@ -12,9 +12,9 @@
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 
     .content-box {
       display: flex;
@@ -33,10 +33,10 @@
         width: 100%;
         height: auto;
         border-radius: 1.25rem;
-        box-shadow: 3px 0 7px rgb(108 108 108 / 10%);
+        box-shadow: 0.1875rem 0 0.4375rem rgba(108, 108, 108, 0.1);
 
         @media (max-width: 768px) {
-          border-radius: 0.4rem;
+          border-radius: 0.25rem;
         }
 
         .img {
@@ -66,7 +66,7 @@
           }
 
           @media (max-width: 768px) {
-            margin-block: 0.2rem 0rem;
+            margin-block: 0.2rem 0;
             gap: 0rem;
           }
 

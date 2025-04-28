@@ -1,35 +1,35 @@
 .home-main {
-  max-width: 1080px;
+  max-width: 67.5rem;
   margin: 0 auto;
-  padding: 125px 20px 0;
+  padding: 7.8125rem 1.25rem 0;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 1024px) {
-    padding: 100px 20px 0;
+    padding: 6.25rem 1.25rem 0;
   }
 
   @media (max-width: 768px) {
-    padding: 80px 20px 0;
+    padding: 5rem 1.25rem 0;
   }
 
   .inner {
     color: var(--tertiary-text-color);
     background-color: var(--tertiary-bg-color);
-    border-radius: 16px;
+    border-radius: 1rem;
     border: 1px dotted rgba(0, 0, 0, 0.16);
-    padding: 60px 0;
+    padding: 3.75rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
 
     @media (max-width: 1024px) {
-      padding: 40px 0;
+      padding: 2.5rem 0;
     }
 
     @media (max-width: 768px) {
-      padding: 35px 0;
+      padding: 2.1875rem 0;
     }
 
     .intro {
@@ -43,7 +43,7 @@
       }
 
       .intro-text {
-        max-width: 780px;
+        max-width: 48.75rem;
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -57,7 +57,7 @@
           font-family: 'Satoshi', sans-serif;
           font-size: 3.8rem;
           text-transform: uppercase;
-          letter-spacing: -2px;
+          letter-spacing: -0.125rem;
 
           span {
             display: block;
@@ -80,7 +80,7 @@
           p {
             font-size: 1.3rem;
             line-height: 1.6;
-            letter-spacing: -0.4px;
+            letter-spacing: -0.025rem;
 
             @media (max-width: 1024px) {
               font-size: 1rem;
@@ -109,7 +109,7 @@
         transform: translateY(0);
       }
       50% {
-        transform: translateY(-10px);
+        transform: translateY(-0.625rem);
       }
     }
 
@@ -127,29 +127,29 @@
 
       .items {
         display: flex;
-        gap: 10px;
+        gap: 0.625rem;
         flex-wrap: nowrap;
         width: max-content;
         animation: img-loop 15s linear infinite;
 
         .item {
-          width: 360px;
+          width: 22.5rem;
           height: auto;
-          border-radius: 15px;
+          border-radius: 0.9375rem;
 
           @media (max-width: 1024px) {
-            width: 300px;
+            width: 18.75rem;
           }
 
           @media (max-width: 768px) {
-            width: 260px;
+            width: 16.25rem;
           }
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 0.9375rem;
           }
         }
       }
@@ -169,7 +169,7 @@
 /* 섹션 페이드 애니메이션 */
 .section {
   opacity: 0.5;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
