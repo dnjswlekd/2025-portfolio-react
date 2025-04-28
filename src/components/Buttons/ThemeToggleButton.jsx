@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import lightModeIcon from '@/assets/icons/lightMode.png';
 import darkModeIcon from '@/assets/icons/darkMode.png';
 
+import './styles/ThemeToggleButton.scss';
+
 function ThemeToggleButton({ theme, toggleTheme }) {
   const [rotating, setRotating] = useState(false);
 
