@@ -18,10 +18,10 @@ import Work from './pages/WorkPage';
 import ScrollToTop from './ScrollToTop';
 import ScrollTopButton from '@/components/Buttons/ScrollTopButton';
 
+import LoadingModal from '@/components/LoadingModal'; // 로딩 모달 컴포넌트 추가
+
 function AnimatedRoutes({ theme }) {
   const location = useLocation();
-
-  // nodeRef 객체 생성 (React 18에서 findDOMNode 대신 사용)
   const nodeRef = useRef(null);
 
   return (
@@ -30,7 +30,7 @@ function AnimatedRoutes({ theme }) {
         key={location.pathname}
         classNames="fade"
         timeout={300}
-        nodeRef={nodeRef} // nodeRef 추가
+        nodeRef={nodeRef}
       >
         <div ref={nodeRef}>
           <ScrollToTop />
@@ -49,6 +49,7 @@ function AnimatedRoutes({ theme }) {
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [loading, setLoading] = useState(true); // 로딩 상태 유지
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -58,7 +59,7 @@ function App() {
 
   useEffect(() => {
     document.body.className = theme;
-  }, [theme]);
+  }, [theme]); // 더 이상 setTimeout 필요 없음!
 
   return (
     <Router basename="/2025-portfolio-react/">
@@ -66,6 +67,8 @@ function App() {
         <div className="inner"></div>
       </div>
       <div className={`App ${theme}`}>
+        {loading && <LoadingModal setLoading={setLoading} />}{' '}
+        {/* setLoading 넘김 */}
         <Header theme={theme} toggleTheme={toggleTheme} />
         <AnimatedRoutes theme={theme} />
         <Footer theme={theme} />

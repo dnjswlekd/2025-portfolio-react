@@ -11,7 +11,9 @@ const SectionWork = ({ data, sectionRef }) => {
   const { sectionClass, linkPage, link, imageSrc, title, desc } = data;
   const handleNotionClick = (e) => {
     e.stopPropagation();
-    if (link) {
+    if (linkPage) {
+      window.open(linkPage, '_blank');
+    } else if (link) {
       window.open(link, '_blank');
     }
   };

@@ -84,7 +84,7 @@
             @media (max-width: 768px) {
               font-size: 1rem;
               height: auto;
-              margin-block: 0.7rem 0.9rem;
+              margin-block: 1.2rem 0.9rem;
             }
           }
 
@@ -107,6 +107,7 @@
         button {
           @include mixin.button-reset;
           @include mixin.anchor-btn;
+          border: 1px solid #979797;
         }
       }
     }

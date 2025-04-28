@@ -5,7 +5,9 @@ import figma from '@/assets/images/figma-icon.png';
 function ProjectContent({ linkPage, link, imageSrc, title, desc }) {
   const handleNotionClick = (e) => {
     e.stopPropagation();
-    if (link) {
+    if (linkPage) {
+      window.open(linkPage, '_blank');
+    } else if (link) {
       window.open(link, '_blank');
     }
   };

@@ -49,5 +49,9 @@
       @include mixin.button-reset;
       @include mixin.anchor-btn;
     }
+    @media (max-width: 768px) {
+      flex-flow: column;
+      gap: 0.4rem;
+    }
   }
 }

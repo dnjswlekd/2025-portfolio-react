@@ -168,6 +168,12 @@
       margin-left: 0rem;
     }
 
+    .intro-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .intro {
       margin-block: 1rem 0;
       display: flex;

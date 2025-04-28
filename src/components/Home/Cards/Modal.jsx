@@ -59,15 +59,19 @@ const Modal = ({ data, onClose }) => {
           </div>
 
           <div className="modal-desc">
-            <div className="modal-notion-btn">
-              {' '}
-              {link && (
-                <button onClick={handleNotionClick}>🔗 Notion 바로가기</button>
-              )}
-            </div>
-            <div className="intro">
-              <span>{duration}</span>
-              <h3>{title}</h3>
+            <div className="intro-wrap">
+              <div className="intro">
+                <span>{duration}</span>
+                <h3>{title}</h3>
+              </div>
+              <div className="modal-notion-btn">
+                {' '}
+                {link && (
+                  <button onClick={handleNotionClick}>
+                    🔗 Notion 바로가기
+                  </button>
+                )}
+              </div>
             </div>
 
             {skills && (
