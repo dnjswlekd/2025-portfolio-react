@@ -66,7 +66,7 @@ function HomeContact() {
 
               <div className="link">
                 <a
-                  href="https://dnjswlekd.notion.site/c2464a78e9e14ed294996934e8b30878?pvs=4"
+                  href="https://www.notion.so/1a2ecdd53fa480b688b1dc72838a04d7?pvs=4"
                   className="notion"
                   target="_blank"
                   rel="noopener noreferrer"
