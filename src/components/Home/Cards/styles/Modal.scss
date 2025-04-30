@@ -136,17 +136,7 @@
 
     button {
       @include mixin.button-reset;
-      padding: 0.4rem 0.5rem;
-      border-radius: 4px;
-      background-color: #f8f8f8;
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-      transition: 0.35s;
-
-      &:hover {
-        background-color: #000;
-        color: #fff;
-      }
+      @include mixin.anchor-btn;
 
       @media (max-width: 1024px) {
         font-size: 0.7rem;
