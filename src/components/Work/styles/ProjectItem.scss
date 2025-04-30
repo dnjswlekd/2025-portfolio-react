@@ -29,9 +29,10 @@
       .preview {
         position: relative;
         overflow: hidden;
+        display: block;
         width: 100%;
         height: auto;
-        border-radius: 1.25rem;
+        border-radius: 0.625rem;
         box-shadow: 0.1875rem 0 0.4375rem rgba(108, 108, 108, 0.1);
 
         .img {
