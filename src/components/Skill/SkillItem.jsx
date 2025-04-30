@@ -3,7 +3,7 @@ import React from 'react';
 function SkillItem({ imgSrc, title, category }) {
   return (
     <li>
-      <a href="#">
+      <a>
         <h3 className="index">{title}</h3>
         <div className="img-box">
           <img src={imgSrc} alt={title} />
