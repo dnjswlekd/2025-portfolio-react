@@ -56,21 +56,29 @@ const Modal = ({ data, onClose }) => {
             data-contribution={`기여도 ${contribution}`}
           >
             <img src={imageSrc} alt={title} />
+            <div className="modal-notion-btn">
+              {' '}
+              {link && (
+                <button onClick={handleNotionClick}>
+                  🔗 Notion <span> 바로가기</span>
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="modal-desc">
             <div className="intro-wrap">
               <div className="intro">
+                <div className="mobile-notion-btn">
+                  {' '}
+                  {link && (
+                    <button onClick={handleNotionClick}>
+                      ➡️ Notion <span> 바로가기</span>
+                    </button>
+                  )}
+                </div>
                 <span>{duration}</span>
                 <h3>{title}</h3>
-              </div>
-              <div className="modal-notion-btn">
-                {' '}
-                {link && (
-                  <button onClick={handleNotionClick}>
-                    🔗 Notion 바로가기
-                  </button>
-                )}
               </div>
             </div>
 

@@ -82,7 +82,7 @@ function HomeContact() {
                   GitHub 바로가기
                 </a>
                 <a
-                  href="public/pdf/resume2025.pdf"
+                  href="/public/pdf/resume2025.pdf"
                   download
                   className="resume"
                   rel="noopener noreferrer"
