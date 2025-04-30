@@ -2,7 +2,9 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import figma from '@/assets/images/figma-icon.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import './styles/ProjectItem.scss';
 
@@ -90,7 +92,7 @@ const SectionWork = ({ data, sectionRef }) => {
                       onClick={() => window.open(link, '_blank')}
                       className="site-btn"
                     >
-                      🔗 사이트 바로가기
+                      <FontAwesomeIcon icon={faArrowRight} /> 사이트 바로가기
                     </button>
                   )}
                   {figmaLink && (
@@ -98,7 +100,7 @@ const SectionWork = ({ data, sectionRef }) => {
                       onClick={() => window.open(figmaLink, '_blank')}
                       className="figma-btn"
                     >
-                      <img src={figma} alt="Figma 아이콘" />
+                      <FontAwesomeIcon icon={faArrowRight} />
                       Figma 바로가기
                     </button>
                   )}

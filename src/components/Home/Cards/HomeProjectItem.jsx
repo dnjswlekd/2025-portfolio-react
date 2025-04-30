@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/HomeProjectItem.scss';
-import figma from '@/assets/images/figma-icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectContent({ figmaLink, link, imageSrc, title, desc }) {
   const handleSiteClick = (e) => {
@@ -25,10 +26,14 @@ function ProjectContent({ figmaLink, link, imageSrc, title, desc }) {
         <p>{desc}</p>
 
         <div className="anchor-btn">
-          {link && <button onClick={handleSiteClick}>🔗 사이트로 이동</button>}
+          {link && (
+            <button onClick={handleSiteClick}>
+              <FontAwesomeIcon icon={faArrowRight} /> 사이트로 이동
+            </button>
+          )}
           {figmaLink && (
             <button onClick={handleFigmaClick}>
-              <img src={figma} alt="figma-icon" />
+              <FontAwesomeIcon icon={faArrowRight} />
               Figma로 이동
             </button>
           )}

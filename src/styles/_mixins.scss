@@ -67,24 +67,37 @@
 @mixin anchor-btn {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 7px;
-  padding: 8px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: 0.35s;
   font-size: 1rem;
-  color: var(--primary-btn-color);
-  background-color: var(--primary-btn-text-color);
-  border: 1px solid var(--primary-btn-border-color);
+  color: #78c7f9;
+  // border: 1px solid var(--primary-btn-border-color);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 
   img {
     width: 13px;
   }
 
   &:hover {
-    background-color: #000;
+    opacity: 0.7;
+    transform: translateX(5%);
+  }
+
+  svg {
+    background-color: #78c7f9;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+    padding: 0.1875rem;
     color: #fff;
+    path {
+      color: var(--primary-bg-color);
+    }
   }
 
   @media (max-width: 1024px) {

@@ -12,18 +12,21 @@ function LoadingModal({ setLoading }) {
     setLoading(false);
   };
 
+  const handleDoNotShowToday = () => {
+    const now = new Date();
+    const expiry = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 24시간 후
+    localStorage.setItem('hideModalUntil', expiry.toISOString());
+    setLoading(false);
+  };
+
   useEffect(() => {
-    // ESC 키 눌렀을 때 모달 닫기
     const handleEsc = (e) => {
       if (e.key === 'Escape') {
         setLoading(false);
       }
     };
 
-    // 이벤트 리스너 등록
     window.addEventListener('keydown', handleEsc);
-
-    // 컴포넌트가 언마운트 될 때 이벤트 리스너 제거
     return () => {
       window.removeEventListener('keydown', handleEsc);
     };
@@ -58,20 +61,25 @@ function LoadingModal({ setLoading }) {
               높였습니다.
             </li>
             <li>
-              3. 최신 트렌드인 <b>다크모드 / 라이트모드</b> 전환 기능을
-              적용하였습니다.
+              3. <b>다크모드 / 라이트모드</b> 전환 기능을 적용하였습니다.
             </li>
             <li>
-              4. <b>반응형(Responsive)</b> 웹 디자인을 적용하여 다양한
-              기기에서도 최적화된 화면을 제공합니다.
+              4. <b>반응형</b> 웹 디자인을 적용하였습니다.
             </li>
           </ul>
-        </div>
 
-        {/* 닫기 버튼 */}
-        <button className="modal-close" onClick={handleClose}>
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
+          <div className="modal-buttons">
+            <button className="modal-close" onClick={handleClose}>
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
+            <button
+              className="modal-today-close"
+              onClick={handleDoNotShowToday}
+            >
+              하루 동안 보지 않음
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

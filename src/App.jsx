@@ -49,7 +49,7 @@ function AnimatedRoutes({ theme }) {
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-  const [loading, setLoading] = useState(true); // 로딩 상태 유지
+  const [loading, setLoading] = useState(false); // 초기 false
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -59,7 +59,17 @@ function App() {
 
   useEffect(() => {
     document.body.className = theme;
-  }, [theme]); // 더 이상 setTimeout 필요 없음!
+  }, [theme]);
+
+  // 하루 동안 모달 보지 않음 처리
+  useEffect(() => {
+    const hideUntil = localStorage.getItem('hideModalUntil');
+    const now = new Date();
+
+    if (!hideUntil || now > new Date(hideUntil)) {
+      setLoading(true); // 모달을 보여줄 조건일 때만 true
+    }
+  }, []);
 
   return (
     <Router basename="/2025-portfolio-react/">
@@ -67,8 +77,7 @@ function App() {
         <div className="inner"></div>
       </div>
       <div className={`App ${theme}`}>
-        {loading && <LoadingModal setLoading={setLoading} />}{' '}
-        {/* setLoading 넘김 */}
+        {loading && <LoadingModal setLoading={setLoading} />}
         <Header theme={theme} toggleTheme={toggleTheme} />
         <AnimatedRoutes theme={theme} />
         <Footer theme={theme} />
