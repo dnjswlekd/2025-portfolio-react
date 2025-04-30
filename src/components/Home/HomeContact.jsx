@@ -66,7 +66,7 @@ function HomeContact() {
 
               <div className="link">
                 <a
-                  href="https://www.notion.so/1a2ecdd53fa480b688b1dc72838a04d7?pvs=4"
+                  href="https://www.notion.so/Wonji-Park-1e5ecdd53fa480a7a749d47abdee715f?pvs=4"
                   className="notion"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -82,10 +82,9 @@ function HomeContact() {
                   GitHub 바로가기
                 </a>
                 <a
-                  href="pdf/resume_final.pdf"
+                  href="public/pdf/resume2025.pdf"
                   download
                   className="resume"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   이력서 다운받기

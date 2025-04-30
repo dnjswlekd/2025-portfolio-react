@@ -36,7 +36,7 @@ const sectionDataList = [
     imageSrc: GroupwareImg,
     duration: '2023.07 ~ 2025.01',
     skills: ['vue.js', 'Options API', 'Kendo UI Library'],
-    tasks: ['디자인', '퍼블리싱', '리디자인', '유지보수'],
+    tasks: ['기획', '디자인', '퍼블리싱', '리디자인', '유지보수'],
     features: [
       '대시보드',
       '전자보고',
@@ -58,7 +58,7 @@ const sectionDataList = [
     imageSrc: MessengerImg,
     duration: '2024.02 ~ 2024.08',
     skills: ['vue.js', 'Composition API', 'Kendo UI Library'],
-    tasks: ['디자인', '퍼블리싱', '리디자인', '유지보수'],
+    tasks: ['기획', '디자인', '퍼블리싱'],
     contribution: '40%',
   },
   {
@@ -69,7 +69,7 @@ const sectionDataList = [
     imageSrc: ParkingImg,
     duration: '2023.10 ~ 2024.02',
     skills: ['vue.js', 'Composition API'],
-    tasks: ['퍼블리싱', '리디자인', '유지보수'],
+    tasks: ['기획', '퍼블리싱', '리디자인', '유지보수'],
     features: [
       '입차/출차',
       'vip 입차 등록/관리',
