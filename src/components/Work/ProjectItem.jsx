@@ -1,3 +1,4 @@
+// src/components/Work/SectionWork.jsx
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,18 +9,10 @@ import './styles/ProjectItem.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionWork = ({ data, sectionRef }) => {
-  const { sectionClass, linkPage, link, imageSrc, title, desc } = data;
-  const handleNotionClick = (e) => {
-    e.stopPropagation();
-    if (linkPage) {
-      window.open(linkPage, '_blank');
-    } else if (link) {
-      window.open(link, '_blank');
-    }
-  };
+  const { sectionClass, figmaLink, link, imageSrc, title, desc } = data;
 
   useEffect(() => {
-    if (!sectionRef.current) return; // DOM이 없으면 종료
+    if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
       gsap.from(`.${sectionClass} h3`, {
@@ -36,7 +29,7 @@ const SectionWork = ({ data, sectionRef }) => {
 
       gsap.from(`.${sectionClass} .text-box`, {
         scrollTrigger: {
-          trigger: `.${sectionClass} .img-wrap `,
+          trigger: `.${sectionClass} .img-wrap`,
           start: 'top 80%',
           toggleActions: 'play none none none',
         },
@@ -67,33 +60,45 @@ const SectionWork = ({ data, sectionRef }) => {
       <div className="inner">
         <ul className="content-box">
           <li className="img-wrap">
-            <a
-              href={link}
-              className="preview"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p className="img">
-                <img src={imageSrc} alt={title} />
-              </p>
-            </a>
+            {link ? (
+              <a
+                href={link}
+                className="preview"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="img">
+                  <img src={imageSrc} alt={title} />
+                </p>
+              </a>
+            ) : (
+              <div className="preview">
+                <p className="img">
+                  <img src={imageSrc} alt={title} />
+                </p>
+              </div>
+            )}
           </li>
           <li className="desc-wrap">
             <div className="desc text-box">
               <div className="intro">
                 <h3>{title}</h3>
                 <p>{desc}</p>
-
                 <div className="anchor-btn">
-                  {' '}
-                  {linkPage && (
-                    <button onClick={handleNotionClick}>
+                  {link && (
+                    <button
+                      onClick={() => window.open(link, '_blank')}
+                      className="site-btn"
+                    >
                       🔗 사이트 바로가기
                     </button>
                   )}
-                  {link && (
-                    <button onClick={handleNotionClick}>
-                      <img src={figma} alt="figma-icon" />
+                  {figmaLink && (
+                    <button
+                      onClick={() => window.open(figmaLink, '_blank')}
+                      className="figma-btn"
+                    >
+                      <img src={figma} alt="Figma 아이콘" />
                       Figma 바로가기
                     </button>
                   )}

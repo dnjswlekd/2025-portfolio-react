@@ -2,13 +2,18 @@ import React from 'react';
 import './styles/HomeProjectItem.scss';
 import figma from '@/assets/images/figma-icon.png';
 
-function ProjectContent({ linkPage, link, imageSrc, title, desc }) {
-  const handleNotionClick = (e) => {
+function ProjectContent({ figmaLink, link, imageSrc, title, desc }) {
+  const handleSiteClick = (e) => {
     e.stopPropagation();
-    if (linkPage) {
-      window.open(linkPage, '_blank');
-    } else if (link) {
+    if (link) {
       window.open(link, '_blank');
+    }
+  };
+
+  const handleFigmaClick = (e) => {
+    e.stopPropagation();
+    if (figmaLink) {
+      window.open(figmaLink, '_blank');
     }
   };
 
@@ -20,12 +25,9 @@ function ProjectContent({ linkPage, link, imageSrc, title, desc }) {
         <p>{desc}</p>
 
         <div className="anchor-btn">
-          {' '}
-          {linkPage && (
-            <button onClick={handleNotionClick}>🔗 사이트로 이동</button>
-          )}
-          {link && (
-            <button onClick={handleNotionClick}>
+          {link && <button onClick={handleSiteClick}>🔗 사이트로 이동</button>}
+          {figmaLink && (
+            <button onClick={handleFigmaClick}>
               <img src={figma} alt="figma-icon" />
               Figma로 이동
             </button>
