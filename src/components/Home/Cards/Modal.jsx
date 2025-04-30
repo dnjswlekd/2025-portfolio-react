@@ -73,7 +73,7 @@ const Modal = ({ data, onClose }) => {
                   {' '}
                   {link && (
                     <button onClick={handleNotionClick}>
-                      ➡️ Notion <span> 바로가기</span>
+                      ➡️ Notion 바로가기
                     </button>
                   )}
                 </div>

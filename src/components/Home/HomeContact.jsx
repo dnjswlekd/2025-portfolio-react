@@ -83,7 +83,7 @@ function HomeContact() {
                 </a>
                 <a
                   href="/public/pdf/resume2025.pdf"
-                  download
+                  download="resume2025.pdf"
                   className="resume"
                   rel="noopener noreferrer"
                 >

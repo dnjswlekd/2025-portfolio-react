@@ -221,7 +221,8 @@
           display: none;
 
           @media (max-width: 768px) {
-            display: block;
+            display: flex;
+            align-items: center;
             @include mixin.button-reset;
             @include mixin.anchor-btn;
             padding-left: 0;
