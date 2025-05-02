@@ -41,11 +41,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             transition: transform 0.3s ease-in-out;
-
-            @media (max-width: 768px) {
-              border-radius: 0.25rem;
-            }
           }
+        }
+        @media (max-width: 768px) {
+          border-radius: 0.25rem;
         }
       }
     }
@@ -110,21 +109,5 @@
         }
       }
     }
-  }
-
-  &:nth-child(1) .preview {
-    background: #f4eafb;
-  }
-
-  &:nth-child(2) .preview {
-    background: #fff5e4;
-  }
-
-  &:nth-child(3) .preview {
-    background: #e2f2e2;
-  }
-
-  &:nth-child(4) .preview {
-    background: #d7eef5;
   }
 }

@@ -54,7 +54,7 @@ function HomeMain({ onScrollToAboutMe }) {
             <div className="desc">
               <p>
                 안녕하세요!
-                <br /> 저는 비즈니스적 사고로 매력적인 사용자 경험을 만드는데{' '}
+                <br /> 저는 비즈니스적 사고로 매력적인 사용자 경험을 만드는데
                 <br />
                 열정을 가진 웹 퍼블리셔 박원지 입니다. 👋
               </p>
