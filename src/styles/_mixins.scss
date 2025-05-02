@@ -58,14 +58,14 @@
 
 @mixin anchor-btn-wrap {
   margin: 1rem 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex: 1;
 }
 
 @mixin anchor-btn {
-  width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 7px;
