@@ -12,7 +12,7 @@ const SectionWork = ({ data, sectionRef }) => {
     imageSrc,
     title,
     duration,
-    skills,
+    mySkills,
     tasks,
     features,
     contribution,
@@ -87,7 +87,7 @@ const SectionWork = ({ data, sectionRef }) => {
               </div>
               <div className="explain">
                 <h4>기술 스택</h4>
-                {skills.map((skill, index) => (
+                {mySkills.map((skill, index) => (
                   <span key={index}>{skill}</span>
                 ))}
               </div>

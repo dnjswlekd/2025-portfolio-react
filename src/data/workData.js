@@ -12,6 +12,7 @@ const workData = [
     link: 'https://www.notion.so/UI-UX-1a2ecdd53fa481a2a33bc677d902dff9?pvs=4',
     imageSrc: GroupwareImg,
     duration: '2023.07 ~ 2025.01',
+    mySkills: ['Vue.js', 'Kendo UI Library'],
     skills: ['Vue.js', 'Kendo UI Library', 'MongoDB', 'Pinia', 'Node.js'],
     tasks: ['기획', '디자인', '퍼블리싱', '리디자인', '유지보수'],
     features: [
@@ -40,6 +41,7 @@ const workData = [
     link: 'https://www.notion.so/1e4ecdd53fa480cbb20ae04a9a676163?pvs=4',
     imageSrc: MessengerImg,
     duration: '2024.02 ~ 2024.08',
+    mySkills: ['Vue.js', 'Tailwind CSS'],
     skills: ['Vue.js', 'Tailwind', 'Pinia', 'Socket.io', 'Electron'],
     tasks: ['기획', '디자인', '퍼블리싱'],
     contribution: '40%',
@@ -57,6 +59,7 @@ const workData = [
     link: 'https://www.notion.so/UI-UX-1a2ecdd53fa480018b48d0e1dad6ff4e?pvs=4',
     imageSrc: ParkingImg,
     duration: '2023.10 ~ 2024.02',
+    mySkills: ['Vue.js'],
     skills: ['Vue.js', 'Pinia', 'Socket.io'],
     tasks: ['기획', '퍼블리싱', '리디자인', '유지보수'],
     features: [
@@ -84,6 +87,7 @@ const workData = [
     imageSrc: BrochureImg,
     link: 'https://www.notion.so/e-1a2ecdd53fa480ad9d30d721d66c9aee?pvs=4',
     duration: '2024.11',
+    mySkills: ['HTML', 'CSS', 'JQuery', 'REST API'],
     skills: ['HTML', 'CSS', 'JQuery', 'REST API'],
     tasks: ['리디자인', '퍼블리싱', '유지보수'],
     features: ['메인페이지', '상세페이지', '반응형'],
