@@ -59,9 +59,15 @@
   }
 
   .modal-work-content {
+    color: #202124;
+
     h3 {
       font-size: 1.5rem;
       margin-block: 0.5rem 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
     }
     .content-wrap {
       .content {
@@ -113,6 +119,10 @@
       button {
         @include mixin.button-reset;
         color: #007bff;
+
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+        }
       }
     }
   }
