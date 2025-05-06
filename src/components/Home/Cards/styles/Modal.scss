@@ -30,7 +30,7 @@
   }
 
   @media (max-width: 768px) {
-    max-width: 360px;
+    max-width: 350px;
     font-size: 0.8rem;
     border-radius: 1rem;
   }
@@ -64,6 +64,7 @@
     h3 {
       font-size: 1.5rem;
       margin-block: 0.5rem 2rem;
+      line-height: 1.4;
 
       @media (max-width: 768px) {
         font-size: 1.3rem;
