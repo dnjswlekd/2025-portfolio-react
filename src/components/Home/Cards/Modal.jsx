@@ -27,7 +27,7 @@ const Modal = ({ data, onClose }) => {
     skills,
     tasks,
     features,
-    imageSrc,
+    // imageSrc,
     contribution,
     link,
   } = data;
@@ -55,7 +55,7 @@ const Modal = ({ data, onClose }) => {
             className="modal-img"
             data-contribution={`기여도 ${contribution}`}
           >
-            <img src={imageSrc} alt={title} />
+            {/* <img src={imageSrc} alt={title} /> */}
             <div className="modal-notion-btn">
               {' '}
               {link && (
