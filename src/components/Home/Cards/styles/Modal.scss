@@ -18,14 +18,14 @@
   overflow-y: auto;
   background: #fff;
   border-radius: 0.7rem;
-  padding: 1.7rem 1.4rem 1.4rem 1.4rem;
+  padding: 1.7rem;
   box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease-in-out;
   font-size: 1rem;
 
   @media (max-width: 1024px) {
     max-width: 470px;
-    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    padding: 1.5rem;
     font-size: 0.9rem;
   }
 
@@ -34,275 +34,86 @@
     font-size: 0.8rem;
     border-radius: 1rem;
   }
-}
 
-.modal-close {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.4rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #666;
-
-  &:hover {
-    color: #000;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    top: 0.5rem;
-    right: 0.6rem;
-  }
-}
-
-.modal-work-content {
-  margin-block: 0.2rem;
-
-  @media (max-width: 768px) {
-    margin-block: 0.5rem 0.8rem;
-  }
-
-  .modal-img {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    border-radius: 0.7rem;
+  .modal-close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: none;
+    border: none;
     cursor: pointer;
-    box-shadow: 3px 0 7px rgba(108, 108, 108, 0.1);
+    color: #666;
+    transition: 0.35s;
 
-    @media (max-width: 768px) {
-      border-radius: 1rem;
-      width: 100%;
-    }
-
-    img {
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transition: transform 0.3s ease-in-out;
-
-      &:hover {
-        box-shadow: inset 0px 0px 1.25rem rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    &::after {
-      position: absolute;
-      content: attr(data-contribution);
-      background: #ddd;
-      padding: 0.5rem 0.7rem;
-      border-radius: 0 0 0 0.5rem;
+    &:hover {
       color: #000;
-      top: 0;
-      right: 0;
-      font-size: 0.8rem;
-      font-weight: bold;
-    }
-
-    &[data-contribution='기여도 100%']::after {
-      background: #007bff;
-      color: #fff;
-    }
-
-    &[data-contribution='기여도 40%']::after {
-      background: #ffa500;
-      color: #fff;
     }
 
     @media (max-width: 768px) {
-      &::after {
-        font-size: 0.7rem;
-        padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      top: 0.8rem;
+      right: 0.6rem;
+    }
+  }
+
+  .modal-work-content {
+    h3 {
+      font-size: 1.5rem;
+      margin-block: 0.5rem 2rem;
+    }
+    .content-wrap {
+      .content {
+        margin-block: 1.7rem;
+        .index {
+          display: flex;
+          align-items: flex-end;
+          gap: 0.3rem;
+          margin-block: 1rem 0.7rem;
+          span {
+            display: inline-block;
+          }
+        }
+        p {
+          line-height: 1.4;
+          color: #666666;
+        }
+      }
+      .skill {
+        display: flex;
+        align-items: center;
+        margin-block: 1.5rem 1rem;
+        flex-wrap: wrap;
+
+        h4 {
+          margin-right: 0.5rem;
+        }
+        span {
+          margin-right: 0.8rem;
+          position: relative;
+
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 2px;
+            height: 2px;
+            border-radius: 20px;
+            background: #000;
+            margin-left: 4px;
+          }
+        }
       }
     }
-
-    .modal-notion-btn {
-      position: absolute;
-      bottom: 3%;
-      right: 2%;
-
-      @media (max-width: 768px) {
-      }
+    .go-notion {
+      display: flex;
+      justify-content: flex-end;
 
       button {
         @include mixin.button-reset;
-        background-color: #000;
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-        color: #fff;
-        transition: 0.35s;
-
-        &:hover {
-          background-color: #f8f8f8;
-          color: #000;
-        }
-
-        @media (max-width: 1024px) {
-          font-size: 0.7rem;
-          padding: 0.18rem 0.3rem;
-          box-shadow: none;
-          padding: 0.1rem 0.2rem;
-        }
-
-        @media (max-width: 768px) {
-          display: none;
-        }
-
-        span {
-          @media (max-width: 768px) {
-            display: none;
-          }
-        }
+        color: #007bff;
       }
     }
-  }
-
-  .modal-desc {
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    gap: 1.3rem;
-    margin-left: 0.5rem;
-    color: #202124;
-
-    @media (max-width: 768px) {
-      margin-left: 0rem;
-    }
-
-    .intro-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .intro {
-      width: 100%;
-      margin-block: 1rem 0;
-      display: flex;
-      align-items: baseline;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      gap: 0.625rem;
-
-      h3 {
-        font-weight: 600;
-        font-size: 1.3rem;
-        margin-block: 0.7rem;
-      }
-
-      @media (max-width: 1024px) {
-        h3 {
-          font-size: 1.2rem;
-        }
-      }
-
-      @media (max-width: 768px) {
-        margin-block: 0.8rem 0;
-        flex-direction: column;
-        gap: 0rem;
-
-        h3 {
-          font-size: 1.1rem;
-        }
-      }
-
-      .mobile-notion-btn {
-        margin-bottom: 0.5rem;
-        margin-left: auto;
-        button {
-          display: none;
-
-          @media (max-width: 768px) {
-            display: flex;
-            align-items: center;
-            @include mixin.button-reset;
-            @include mixin.anchor-btn;
-            padding-left: 0;
-          }
-        }
-      }
-    }
-
-    h5 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      opacity: 0.7;
-
-      @media (max-width: 1024px) {
-        font-size: 1rem;
-      }
-
-      @media (max-width: 768px) {
-        font-size: 0.95rem;
-      }
-    }
-
-    .explain {
-      line-height: 1.5;
-
-      h4 {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.7rem;
-        font-size: 1.1rem;
-
-        @media (max-width: 768px) {
-          font-size: 0.9rem;
-          font-weight: 400;
-          color: #6b6b6b;
-        }
-      }
-
-      span {
-        position: relative;
-        display: inline-block;
-        margin-right: 1.25rem;
-        text-transform: capitalize;
-        letter-spacing: -0.025rem;
-
-        &:not(:last-child)::after {
-          content: '';
-          position: absolute;
-          width: 3px;
-          height: 3px;
-          background-color: #2b2b2b;
-          border-radius: 50%;
-          top: 50%;
-          left: calc(100% + 7px);
-          transform: translateY(-50%);
-        }
-      }
-    }
-  }
-
-  // 배경색 커스터마이징
-  &:nth-child(1) .modal-img {
-    background: #f4eafb;
-  }
-
-  &:nth-child(2) .modal-img {
-    background: #fff5e4;
-  }
-
-  &:nth-child(3) .modal-img {
-    background: #e2f2e2;
-  }
-
-  &:nth-child(4) .modal-img {
-    background: #d7eef5;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
