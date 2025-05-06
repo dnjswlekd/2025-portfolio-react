@@ -37,7 +37,7 @@ const workData = [
   {
     type: 'work',
     sectionClass: 'section01',
-    title: '병원전용 메신저 시스템',
+    title: '메신저 시스템 UI/UX 기획, 디자인 및 퍼블리싱',
     link: 'https://www.notion.so/1e4ecdd53fa480cbb20ae04a9a676163?pvs=4',
     imageSrc: MessengerImg,
     duration: '2024.02 ~ 2024.08',
@@ -55,7 +55,7 @@ const workData = [
   {
     type: 'work',
     sectionClass: 'section01',
-    title: '병원전용 주차관제 시스템',
+    title: '발렛 전용 주차관제 시스템 기획, UI/UX 디자인 및 퍼블리싱',
     link: 'https://www.notion.so/UI-UX-1a2ecdd53fa480018b48d0e1dad6ff4e?pvs=4',
     imageSrc: ParkingImg,
     duration: '2023.10 ~ 2024.02',
@@ -83,7 +83,7 @@ const workData = [
   {
     type: 'work',
     sectionClass: 'section01',
-    title: 'E-브로슈어 쇼핑몰 메인, 상세페이지',
+    title: 'E-브로슈어 퍼블리싱 및 프론트엔드 개발',
     imageSrc: BrochureImg,
     link: 'https://www.notion.so/e-1a2ecdd53fa480ad9d30d721d66c9aee?pvs=4',
     duration: '2024.11',
