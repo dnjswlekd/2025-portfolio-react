@@ -55,7 +55,7 @@ const workData = [
   {
     type: 'work',
     sectionClass: 'section01',
-    title: '병원전용 주차관제 시스템 (모바일)',
+    title: '병원전용 주차관제 시스템',
     link: 'https://www.notion.so/UI-UX-1a2ecdd53fa480018b48d0e1dad6ff4e?pvs=4',
     imageSrc: ParkingImg,
     duration: '2023.10 ~ 2024.02',
