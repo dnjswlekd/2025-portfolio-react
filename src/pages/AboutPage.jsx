@@ -87,7 +87,7 @@ function About() {
             </ul>
           </div>
           <div className="work">
-            <h3>certifications</h3>
+            <h3>work experience</h3>
             <ul>
               <li>2023.07 - 2025.01 이쓰리티에스 UI개발팀 주임</li>
               <li>
@@ -96,7 +96,7 @@ function About() {
             </ul>
           </div>
           <div className="work">
-            <h3>work experience</h3>
+            <h3>experience</h3>
             <ul>
               <li>2023.07 - 2025.01 이쓰리티에스 UI/UX 퍼블리셔</li>
               <li>
@@ -106,7 +106,7 @@ function About() {
             </ul>
           </div>
           <div className="work">
-            <h3>licenses</h3>
+            <h3>certifications</h3>
             <ul>
               <li>GTQ 그래픽기술자격 - 포토샵 1급 취득</li>
               <li>GTQi 그래픽기술자격 - 일러스트 1급 취득</li>
